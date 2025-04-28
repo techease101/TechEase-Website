@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechEase - Technology Made Simple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <h1>Technology Help, Without the Hassle</h1>
+      <p>Fast, friendly, personalized tech support — right when you need it most.</p>
+      <a href="#contact" class="btn pulse">Get Help Now</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card"><h3>Device Setup</h3><p>Phones, tablets, computers, smart TVs set up right the first time.</p></div>
+      <div class="card"><h3>Wi-Fi & Internet Help</h3><p>Fix dropped connections, slow Wi-Fi, router issues at home or office.</p></div>
+      <div class="card"><h3>Account Recovery</h3><p>Recover lost email, Facebook, Google, and other accounts securely.</p></div>
+      <div class="card"><h3>Virus & Malware Removal</h3><p>Clean and protect your devices from dangerous viruses and malware.</p></div>
+      <div class="card"><h3>Smart Home Setup</h3><p>Install and connect Ring, Alexa, cameras, and other smart devices.</p></div>
+      <div class="card"><h3>Printer Setup & Troubleshooting</h3><p>Get your printers connected and running smoothly — wirelessly or wired.</p></div>
+      <div class="card"><h3>Data Backup & Transfer</h3><p>Safely move files to new devices or external drives.</p></div>
+      <div class="card"><h3>Computer Tune-Ups</h3><p>Speed up slow computers and laptops without replacing them.</p></div>
+      <div class="card"><h3>Email Setup & Support</h3><p>Configure Gmail, Outlook, Yahoo, and other accounts on all devices.</p></div>
+      <div class="card"><h3>Password Manager Setup</h3><p>Get help setting up secure password management tools.</p></div>
+      <div class="card"><h3>Tech Consultations</h3><p>Personalized advice to choose the best tech for your needs.</p></div>
+      <div class="card"><h3>Remote Support</h3><p>Quick remote support for many tech issues, from the comfort of your home.</p></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About TechEase</h2>
+      <p>TechEase was founded with one mission: to make technology simple, stress-free, and empowering for everyone. We believe that tech should serve you — not frustrate you. Whether you're setting up a new device, recovering a lost account, fixing Wi-Fi, or just getting your smart home connected, TechEase is here to help you every step of the way with friendly, expert support you can trust.</p>
+      <a href="#contact" class="btn pulse">Book Tech Support</a>
+    </div>
+    <img src="images/tech-help.jpg" alt="Helping with Technology">
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>"TechEase helped me recover my email and Wi-Fi setup in under 30 minutes! Amazing support!"</p>
+        <h4>- Sarah L.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I couldn't get my printer working for weeks — TechEase had it printing wirelessly in one visit!"</p>
+        <h4>- John P.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Professional, fast, and so friendly. I recommend TechEase to everyone who struggles with tech!"</p>
+        <h4>- Maria V.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get Help Now</h2>
+    <p>Fill out the form below and our friendly tech team will get in touch quickly!</p>
+    <form action="https://formsubmit.co/gettechease@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell us your issue..." required></textarea>
+      <button type="submit" class="btn pulse">Request Help</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TechEase. Technology Made Simple.</p>
+  </footer>
+
+<script>
+  // Smooth Scroll Behavior
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
