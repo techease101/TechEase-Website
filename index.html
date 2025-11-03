@@ -76,6 +76,13 @@
       object-fit: contain;
       border-radius: 50%;
       box-shadow: var(--shadow);
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
     }
 
     .brand-text h1 {
@@ -786,6 +793,7 @@
       padding: 10px 15px;
       border-radius: 20px;
       max-width: 80%;
+      word-wrap: break-word;
     }
 
     .chat-message.bot {
@@ -812,6 +820,7 @@
       border: 1px solid #ddd;
       border-radius: 30px;
       margin-right: 10px;
+      font-size: 14px;
     }
 
     .chat-send {
@@ -964,7 +973,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="https://placeholder.pics/svg/60x60/3A86FF-8338EC/FFFFFF-FFFFFF/Logo" alt="TechEase logo" class="logo" />
+        <div class="logo">TE</div>
         <div class="brand-text">
           <h1>TechEase</h1>
           <p class="tag">Technology Made Simple</p>
@@ -1292,11 +1301,11 @@
         <div class="footer-col">
           <h3>Services</h3>
           <ul class="footer-links">
-            <li><a href="#">Device Setup</a></li>
-            <li><a href="#">Wi-Fi & Internet</a></li>
-            <li><a href="#">Account Recovery</a></li>
-            <li><a href="#">Virus & Security</a></li>
-            <li><a href="#">Smart Home Help</a></li>
+            <li><a href="#services">Device Setup</a></li>
+            <li><a href="#services">Wi-Fi & Internet</a></li>
+            <li><a href="#services">Account Recovery</a></li>
+            <li><a href="#services">Virus & Security</a></li>
+            <li><a href="#services">Smart Home Help</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1326,14 +1335,14 @@
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <div class="chat-body">
+      <div class="chat-body" id="chat-body">
         <div class="chat-message bot">
-          Hi there! How can we help you today?
+          Hi there! I'm your TechEase assistant. How can I help you with technology today? You can ask me about services, pricing, or schedule a consultation.
         </div>
       </div>
       <div class="chat-input">
-        <input type="text" placeholder="Type your message...">
-        <button class="chat-send">
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button class="chat-send" id="chat-send">
           <i class="fas fa-paper-plane"></i>
         </button>
       </div>
@@ -1362,10 +1371,13 @@
       mobileNav.classList.remove('active');
     });
 
-    // Chat widget toggle
+    // Chat widget functionality
     const chatBtn = document.querySelector('.chat-btn');
     const chatBox = document.querySelector('.chat-box');
     const chatClose = document.querySelector('.chat-close');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatBody = document.getElementById('chat-body');
     
     chatBtn.addEventListener('click', () => {
       chatBox.classList.toggle('active');
@@ -1373,6 +1385,75 @@
     
     chatClose.addEventListener('click', () => {
       chatBox.classList.remove('active');
+    });
+
+    // Smart chatbot responses
+    const botResponses = {
+      greeting: ["Hello! I'm your TechEase assistant. How can I help you with technology today?", "Hi there! Ready to make technology easier? What can I help you with?"],
+      services: "We offer: Device Setup ($20-45), Wi-Fi Help ($35-45), Account Recovery ($20-35), Virus Removal ($45-60), Smart Home Setup ($35-75), and Group Workshops ($75-150). All include free consultation!",
+      pricing: "Our pricing: Basic (30min) $20, Standard (1hr) $35-45, Extended $60-75. Workshops: $75-150. Free initial consultation!",
+      contact: "Call Victor at (719) 253-2733 or email gettechease@gmail.com. We serve St. Louis and surrounding areas with on-site visits.",
+      hours: "We're available Monday-Saturday 8AM-8PM. Emergency support available outside hours for existing clients.",
+      owner: "TechEase is owned by Victor Duarte - patient, friendly tech support specialist focused on seniors and communities.",
+      consultation: "Free consultations include: assessment of your tech issues, solution recommendations, and no-obligation pricing. Call (719) 253-2733 to schedule!",
+      default: "I'd love to help! For specific questions about services, pricing, or to schedule a consultation, please call Victor at (719) 253-2733 or email gettechease@gmail.com"
+    };
+
+    function getBotResponse(userMessage) {
+      const message = userMessage.toLowerCase();
+      
+      if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
+        return botResponses.greeting[Math.floor(Math.random() * botResponses.greeting.length)];
+      }
+      if (message.includes('service') || message.includes('what do you do') || message.includes('help with')) {
+        return botResponses.services;
+      }
+      if (message.includes('price') || message.includes('cost') || message.includes('how much')) {
+        return botResponses.pricing;
+      }
+      if (message.includes('contact') || message.includes('call') || message.includes('email') || message.includes('number')) {
+        return botResponses.contact;
+      }
+      if (message.includes('hour') || message.includes('when') || message.includes('available')) {
+        return botResponses.hours;
+      }
+      if (message.includes('who') || message.includes('owner') || message.includes('victor')) {
+        return botResponses.owner;
+      }
+      if (message.includes('consult') || message.includes('free') || message.includes('schedule')) {
+        return botResponses.consultation;
+      }
+      
+      return botResponses.default;
+    }
+
+    function addMessage(message, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `chat-message ${isUser ? 'user' : 'bot'}`;
+      messageDiv.textContent = message;
+      chatBody.appendChild(messageDiv);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (message) {
+        addMessage(message, true);
+        chatInput.value = '';
+        
+        // Bot response after short delay
+        setTimeout(() => {
+          const response = getBotResponse(message);
+          addMessage(response);
+        }, 1000);
+      }
+    }
+
+    chatSend.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
     });
 
     // Back to top button
