@@ -74,7 +74,7 @@
       width: 60px;
       height: 60px;
       object-fit: contain;
-      border-radius: 50%;
+      border-radius: 12px;
       box-shadow: var(--shadow);
       background: var(--gradient);
       display: flex;
@@ -82,7 +82,50 @@
       justify-content: center;
       color: white;
       font-weight: bold;
+      font-size: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .logo-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo-text {
       font-size: 24px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .logo-subtext {
+      font-size: 8px;
+      font-weight: 600;
+      opacity: 0.9;
+      letter-spacing: 0.5px;
     }
 
     .brand-text h1 {
@@ -973,7 +1016,12 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="logo">TE</div>
+        <div class="logo">
+          <div class="logo-inner">
+            <div class="logo-text">TE</div>
+            <div class="logo-subtext">SOLUTIONS</div>
+          </div>
+        </div>
         <div class="brand-text">
           <h1>TechEase</h1>
           <p class="tag">Technology Made Simple</p>
@@ -1381,47 +1429,69 @@
     
     chatBtn.addEventListener('click', () => {
       chatBox.classList.toggle('active');
+      if (chatBox.classList.contains('active')) {
+        chatInput.focus();
+      }
     });
     
     chatClose.addEventListener('click', () => {
       chatBox.classList.remove('active');
     });
 
-    // Smart chatbot responses
+    // Enhanced chatbot responses with better keyword matching
     const botResponses = {
       greeting: ["Hello! I'm your TechEase assistant. How can I help you with technology today?", "Hi there! Ready to make technology easier? What can I help you with?"],
-      services: "We offer: Device Setup ($20-45), Wi-Fi Help ($35-45), Account Recovery ($20-35), Virus Removal ($45-60), Smart Home Setup ($35-75), and Group Workshops ($75-150). All include free consultation!",
-      pricing: "Our pricing: Basic (30min) $20, Standard (1hr) $35-45, Extended $60-75. Workshops: $75-150. Free initial consultation!",
-      contact: "Call Victor at (719) 253-2733 or email gettechease@gmail.com. We serve St. Louis and surrounding areas with on-site visits.",
-      hours: "We're available Monday-Saturday 8AM-8PM. Emergency support available outside hours for existing clients.",
-      owner: "TechEase is owned by Victor Duarte - patient, friendly tech support specialist focused on seniors and communities.",
-      consultation: "Free consultations include: assessment of your tech issues, solution recommendations, and no-obligation pricing. Call (719) 253-2733 to schedule!",
+      services: "We offer: 📱 Device Setup ($20-45), 📶 Wi-Fi Help ($35-45), 🔑 Account Recovery ($20-35), 🛡️ Virus Removal ($45-60), 🏠 Smart Home Setup ($35-75), and 👥 Group Workshops ($75-150). All services include free consultation!",
+      pricing: "💰 Our pricing: Basic (30min) $20, Standard (1hr) $35-45, Extended $60-75. Workshops: $75-150. Free initial consultation included with all services!",
+      contact: "📞 Call Victor at (719) 253-2733 or 📧 email gettechease@gmail.com. We serve St. Louis and surrounding areas with on-site visits and remote support.",
+      hours: "🕘 We're available Monday-Saturday 8AM-8PM. Emergency support available outside hours for existing clients.",
+      owner: "👨‍💼 TechEase is owned by Victor Duarte - patient, friendly tech support specialist focused on seniors and communities in the St. Louis area.",
+      consultation: "🎯 Free consultations include: assessment of your tech issues, solution recommendations, and no-obligation pricing. Call (719) 253-2733 to schedule!",
+      help: "I can help with: • Service information • Pricing • Scheduling consultations • Contact details • Business hours • General tech questions",
       default: "I'd love to help! For specific questions about services, pricing, or to schedule a consultation, please call Victor at (719) 253-2733 or email gettechease@gmail.com"
     };
 
     function getBotResponse(userMessage) {
-      const message = userMessage.toLowerCase();
+      const message = userMessage.toLowerCase().trim();
       
-      if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
+      // Greeting detection
+      if (/(hi|hello|hey|good morning|good afternoon)/.test(message)) {
         return botResponses.greeting[Math.floor(Math.random() * botResponses.greeting.length)];
       }
-      if (message.includes('service') || message.includes('what do you do') || message.includes('help with')) {
+      
+      // Services detection
+      if (/(service|what do you do|help with|setup|install|repair|fix|troubleshoot)/.test(message)) {
         return botResponses.services;
       }
-      if (message.includes('price') || message.includes('cost') || message.includes('how much')) {
+      
+      // Pricing detection
+      if (/(price|cost|how much|rate|fee|charge)/.test(message)) {
         return botResponses.pricing;
       }
-      if (message.includes('contact') || message.includes('call') || message.includes('email') || message.includes('number')) {
+      
+      // Contact detection
+      if (/(contact|call|phone|number|email|address|location)/.test(message)) {
         return botResponses.contact;
       }
-      if (message.includes('hour') || message.includes('when') || message.includes('available')) {
+      
+      // Hours detection
+      if (/(hour|when|available|open|close|schedule|time)/.test(message)) {
         return botResponses.hours;
       }
-      if (message.includes('who') || message.includes('owner') || message.includes('victor')) {
+      
+      // Owner detection
+      if (/(who|owner|victor|duarte|founder)/.test(message)) {
         return botResponses.owner;
       }
-      if (message.includes('consult') || message.includes('free') || message.includes('schedule')) {
+      
+      // Consultation detection
+      if (/(consult|free|meeting|appointment|schedule|book)/.test(message)) {
         return botResponses.consultation;
+      }
+      
+      // Help detection
+      if (/(help|support|assist|what can you do)/.test(message)) {
+        return botResponses.help;
       }
       
       return botResponses.default;
@@ -1445,7 +1515,7 @@
         setTimeout(() => {
           const response = getBotResponse(message);
           addMessage(response);
-        }, 1000);
+        }, 800);
       }
     }
 
@@ -1501,8 +1571,6 @@
         testimonialDots.forEach(d => d.classList.remove('active'));
         // Add active class to clicked dot
         dot.classList.add('active');
-        
-        // In a real implementation, you would change the testimonial content here
       });
     });
 
@@ -1511,9 +1579,6 @@
     
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      // In a real implementation, you would send the form data to a server
-      // For now, we'll just show an alert
       alert('Thank you for your message! We will get back to you soon.');
       contactForm.reset();
     });
@@ -1523,6 +1588,7 @@
     
     openChatBtn.addEventListener('click', () => {
       chatBox.classList.add('active');
+      chatInput.focus();
     });
   </script>
 </body>
