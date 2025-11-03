@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TechEase | Premium Tech Support for Seniors & Communities</title>
-  <meta name="description" content="TechEase provides premium tech support for seniors & communities — device setup, Wi-Fi, account recovery, and workshops. Free consultations." />
+  <title>TechEase | Fast & Friendly Tech Support for Seniors & Communities</title>
+  <meta name="description" content="TechEase provides fast, friendly tech support for seniors & communities — device setup, Wi-Fi, account recovery, and workshops. Free consultations." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --primary-light: #3b82f6;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --gray: #64748b;
-      --gray-light: #e2e8f0;
-      --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --primary: #3a86ff;
+      --primary-dark: #2667cc;
+      --secondary: #8338ec;
+      --accent: #ff006e;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #38b000;
+      --warning: #ff9e00;
+      --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s ease;
       --container: 1200px;
       --radius: 12px;
     }
@@ -30,25 +31,24 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       color: var(--dark);
-      background-color: #ffffff;
+      background-color: #fff;
       overflow-x: hidden;
-      font-weight: 400;
     }
 
     .container {
       max-width: var(--container);
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
 
     /* Header & Navigation */
     .site-header {
       background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
       left: 0;
@@ -61,34 +61,33 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 0;
+      padding: 14px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
-      text-decoration: none;
+      gap: 12px;
     }
 
+    /* NEW PREMIUM LOGO */
     .logo {
-      width: 48px;
-      height: 48px;
-      background: var(--dark);
-      border-radius: 12px;
+      width: 50px;
+      height: 50px;
+      background: #000;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
-      transition: var(--transition);
     }
 
     .logo-symbol {
       width: 24px;
       height: 24px;
       background: var(--primary);
-      border-radius: 6px;
+      border-radius: 5px;
       position: relative;
       transform: rotate(45deg);
     }
@@ -105,109 +104,114 @@
       transform: translate(-50%, -50%);
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
+    .brand-text h1 {
+      margin: 0;
       font-size: 24px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.5px;
-      line-height: 1;
     }
 
-    .brand-tagline {
-      font-size: 12px;
-      color: var(--gray);
+    .tag {
+      margin: 0;
+      color: var(--primary);
+      font-size: 14px;
       font-weight: 500;
-      letter-spacing: 0.5px;
-      margin-top: 2px;
     }
 
     .nav {
       display: flex;
-      gap: 32px;
+      gap: 25px;
     }
 
     .nav a {
       color: var(--dark);
       text-decoration: none;
-      font-weight: 500;
-      font-size: 15px;
-      transition: var(--transition);
+      font-weight: 600;
       position: relative;
+      padding: 5px 0;
+      transition: var(--transition);
+    }
+
+    .nav a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      transition: var(--transition);
     }
 
     .nav a:hover {
       color: var(--primary);
     }
 
-    .nav a::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      transition: var(--transition);
+    .nav a:hover:after {
+      width: 100%;
     }
 
-    .nav a:hover::after {
-      width: 100%;
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--dark);
+      cursor: pointer;
     }
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+      background: var(--gradient);
       color: white;
-      padding: 160px 0 100px;
+      padding: 150px 0 100px;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
+    .hero:before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
+      width: 100%;
+      height: 100%;
       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill="white"/></svg>');
-      background-size: 100% 120px;
+      background-size: 100% 100px;
       background-position: bottom;
       background-repeat: no-repeat;
     }
 
     .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      display: flex;
       align-items: center;
+      gap: 40px;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
-    .hero-content h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      letter-spacing: -1px;
+    .hero-left {
+      flex: 1;
     }
 
-    .hero-content p {
-      font-size: 1.25rem;
-      color: #cbd5e1;
-      margin-bottom: 40px;
-      line-height: 1.6;
+    .hero-left h2 {
+      font-size: 3.2rem;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+
+    .hero-left p {
+      font-size: 1.2rem;
+      margin: 0 0 30px;
+      opacity: 0.9;
     }
 
     .hero-cta {
       display: flex;
-      gap: 16px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
@@ -215,178 +219,535 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 16px 32px;
-      border-radius: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
       border: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 16px;
       cursor: pointer;
       transition: var(--transition);
       text-decoration: none;
+      box-shadow: var(--shadow);
     }
 
     .btn.primary {
-      background: var(--primary);
-      color: white;
+      background: white;
+      color: var(--primary);
     }
 
     .btn.primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
     }
 
-    .btn.secondary {
+    .btn.outline {
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.8);
       color: white;
     }
 
-    .btn.secondary:hover {
+    .btn.outline:hover {
       background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-2px);
+      transform: translateY(-5px);
     }
 
-    .hero-visual {
+    .hero-right {
+      flex: 1;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
-    .hero-graphic {
+    .hero-image {
       width: 100%;
-      max-width: 400px;
-      height: 300px;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      max-width: 500px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-hover);
+      transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+      transition: var(--transition);
     }
 
-    .graphic-element {
-      width: 120px;
-      height: 120px;
-      background: var(--primary);
-      border-radius: 24px;
-      transform: rotate(45deg);
-      position: relative;
+    .hero-image:hover {
+      transform: perspective(1000px) rotateY(0) rotateX(0);
     }
 
-    .graphic-element::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 60px;
-      height: 60px;
-      background: white;
-      border-radius: 12px;
-      transform: translate(-50%, -50%);
-    }
-
-    /* Sections */
-    .section {
+    /* Features Section */
+    .features {
       padding: 100px 0;
-    }
-
-    .section.light {
       background: var(--light);
     }
 
-    .section-header {
+    .section-title {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 60px;
     }
 
-    .section-header h2 {
+    .section-title h2 {
       font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
     }
 
-    .section-header p {
-      font-size: 1.125rem;
-      color: var(--gray);
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: #666;
       max-width: 600px;
       margin: 0 auto;
     }
 
-    /* Services Grid */
-    .services-grid {
+    .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      font-size: 32px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .service-card {
       background: white;
-      padding: 40px 32px;
-      border-radius: 16px;
+      border-radius: var(--radius);
+      overflow: hidden;
       box-shadow: var(--shadow);
       transition: var(--transition);
-      border: 1px solid var(--gray-light);
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
       box-shadow: var(--shadow-hover);
     }
 
     .service-icon {
-      width: 64px;
-      height: 64px;
-      background: var(--gradient);
-      border-radius: 16px;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 24px;
+      background: var(--gradient);
       color: white;
-      font-size: 24px;
+      font-size: 48px;
     }
 
-    .service-card h3 {
-      font-size: 1.5rem;
+    .service-content {
+      padding: 25px;
+    }
+
+    .service-content h3 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .testimonials-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .testimonial-slide {
+      background: white;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin: 0 20px;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .testimonial-text:before,
+    .testimonial-text:after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--primary);
+      opacity: 0.3;
+      position: absolute;
+    }
+
+    .testimonial-text:before {
+      top: -20px;
+      left: -10px;
+    }
+
+    .testimonial-text:after {
+      bottom: -40px;
+      right: -10px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .testimonial-role {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .testimonial-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .testimonial-dot.active {
+      background: var(--primary);
+    }
+
+    /* About Section */
+    .about {
+      padding: 100px 0;
+    }
+
+    .about-inner {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .about-features {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .about-features li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .about-features li i {
+      color: var(--success);
+      font-size: 1.2rem;
+    }
+
+    .about-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Stats Section */
+    .stats {
+      padding: 80px 0;
+      background: var(--gradient);
+      color: white;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-item p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .contact-inner {
+      display: flex;
+      gap: 50px;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .contact-details {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .contact-details li {
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .contact-details li i {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+
+    .contact-form {
+      flex: 1;
+      background: white;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
       font-weight: 600;
-      margin-bottom: 16px;
     }
 
-    .service-card p {
-      color: var(--gray);
-      line-height: 1.6;
+    .form-control {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: var(--radius);
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+      outline: none;
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 0 20px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-col h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      color: #bbb;
+      font-size: 0.9rem;
     }
 
     /* Chat Widget */
     .chat-widget {
       position: fixed;
-      bottom: 32px;
-      right: 32px;
+      bottom: 30px;
+      right: 30px;
       z-index: 1000;
     }
 
     .chat-btn {
-      width: 64px;
-      height: 64px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 50%;
+      width: 60px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      box-shadow: var(--shadow-hover);
       cursor: pointer;
       transition: var(--transition);
-      box-shadow: var(--shadow-hover);
+      border: none;
       font-size: 24px;
     }
 
     .chat-btn:hover {
-      background: var(--primary-dark);
       transform: scale(1.1);
     }
 
@@ -394,21 +755,20 @@
       position: absolute;
       bottom: 80px;
       right: 0;
-      width: 380px;
+      width: 350px;
       background: white;
-      border-radius: 16px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow-hover);
       overflow: hidden;
       display: none;
-      border: 1px solid var(--gray-light);
     }
 
     .chat-box.active {
       display: block;
-      animation: slideUp 0.3s ease;
+      animation: fadeInUp 0.3s ease;
     }
 
-    @keyframes slideUp {
+    @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(20px);
@@ -420,84 +780,75 @@
     }
 
     .chat-header {
-      background: var(--dark);
+      background: var(--gradient);
       color: white;
-      padding: 20px 24px;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .chat-header h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
+      margin: 0;
+      font-size: 1.2rem;
     }
 
     .chat-close {
       background: none;
       border: none;
       color: white;
+      font-size: 20px;
       cursor: pointer;
-      font-size: 18px;
-      padding: 4px;
     }
 
     .chat-body {
-      padding: 24px;
-      max-height: 400px;
+      padding: 20px;
+      max-height: 300px;
       overflow-y: auto;
     }
 
     .chat-message {
-      margin-bottom: 16px;
-      padding: 12px 16px;
-      border-radius: 12px;
-      max-width: 85%;
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      max-width: 80%;
       word-wrap: break-word;
-      line-height: 1.4;
     }
 
     .chat-message.bot {
-      background: var(--light);
-      border-bottom-left-radius: 4px;
+      background: #f1f1f1;
+      border-top-left-radius: 5px;
     }
 
     .chat-message.user {
       background: var(--primary);
       color: white;
       margin-left: auto;
-      border-bottom-right-radius: 4px;
+      border-top-right-radius: 5px;
     }
 
     .chat-input {
       display: flex;
-      padding: 20px 24px;
-      border-top: 1px solid var(--gray-light);
-      gap: 12px;
+      padding: 15px;
+      border-top: 1px solid #eee;
     }
 
     .chat-input input {
       flex: 1;
-      padding: 12px 16px;
-      border: 1px solid var(--gray-light);
-      border-radius: 8px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      margin-right: 10px;
       font-size: 14px;
-      outline: none;
-      transition: var(--transition);
-    }
-
-    .chat-input input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
     }
 
     .chat-send {
       background: var(--primary);
       color: white;
       border: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -509,88 +860,129 @@
       background: var(--primary-dark);
     }
 
-    /* Footer */
-    .site-footer {
-      background: var(--dark);
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--gradient);
       color: white;
-      padding: 80px 0 32px;
-    }
-
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-col h4 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      color: #94a3b8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
       transition: var(--transition);
-      font-size: 14px;
+      z-index: 999;
     }
 
-    .footer-links a:hover {
-      color: white;
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
     }
 
-    .copyright {
-      text-align: center;
-      padding-top: 32px;
-      border-top: 1px solid #334155;
-      color: #94a3b8;
-      font-size: 14px;
+    .back-to-top:hover {
+      transform: translateY(-5px);
     }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-        text-align: center;
+    @media (max-width: 992px) {
+      .hero-inner,
+      .about-inner,
+      .contact-inner {
+        flex-direction: column;
       }
       
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+      .hero-left h2 {
+        font-size: 2.5rem;
       }
-    }
-
-    @media (max-width: 768px) {
+      
       .nav {
         display: none;
       }
       
-      .hero-content h1 {
-        font-size: 2.5rem;
+      .mobile-menu-btn {
+        display: block;
       }
       
-      .section-header h2 {
+      .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: var(--transition);
+      }
+      
+      .mobile-nav.active {
+        transform: translateX(0);
+      }
+      
+      .mobile-nav a {
+        padding: 15px 0;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: var(--dark);
+      }
+      
+      .mobile-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 120px 0 80px;
+      }
+      
+      .hero-left h2 {
         font-size: 2rem;
       }
       
-      .chat-box {
-        width: 320px;
-        right: -16px;
+      .section-title h2 {
+        font-size: 2rem;
       }
       
-      .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
+      .btn {
+        padding: 12px 24px;
+      }
+      
+      .chat-box {
+        width: 300px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-left h2 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .chat-box {
+        width: 280px;
+        right: -20px;
       }
     }
   </style>
@@ -599,100 +991,312 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand">
+      <div class="brand">
+        <!-- NEW PREMIUM LOGO -->
         <div class="logo">
           <div class="logo-symbol"></div>
         </div>
         <div class="brand-text">
-          <div class="brand-name">TechEase</div>
-          <div class="brand-tagline">TECHNOLOGY SOLUTIONS</div>
+          <h1>TechEase</h1>
+          <p class="tag">Technology Made Simple</p>
         </div>
-      </a>
+      </div>
 
       <nav class="nav">
         <a href="#home">Home</a>
+        <a href="#features">Why Us</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
+      
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <button class="mobile-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="#home">Home</a>
+    <a href="#features">Why Us</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container hero-inner">
-      <div class="hero-content">
-        <h1>Technology help, without the complexity</h1>
-        <p>Premium tech support for seniors and communities. Patient, professional service with on-site visits, remote assistance, and educational workshops.</p>
+      <div class="hero-left">
+        <h2>Technology help, without the hassle</h2>
+        <p>Local, patient & trusted tech support for seniors and communities. On-site visits, remote help, and group workshops.</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn primary">
-            <i class="fas fa-calendar-check"></i>
-            Schedule Service
+          <a class="btn primary" href="#contact">
+            <i class="fas fa-calendar-check"></i> Get Help Now
           </a>
-          <button id="open-chat" class="btn secondary">
-            <i class="fas fa-comments"></i>
-            Free Consultation
+          <button id="open-chat" class="btn outline">
+            <i class="fas fa-comments"></i> Free Consultation
           </button>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-graphic">
-          <div class="graphic-element"></div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Helping with technology" class="hero-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose TechEase</h2>
+        <p>We make technology accessible and stress-free for everyone</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <h3>Patient & Friendly</h3>
+          <p>We take the time to explain things clearly and ensure you're comfortable with your technology.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>On-Site Service</h3>
+          <p>We come to you! Home visits, community centers, or remote assistance - whatever works best.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Security Focused</h3>
+          <p>We prioritize your digital safety with scam awareness and security best practices.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="section">
+  <section class="services" id="services">
     <div class="container">
-      <div class="section-header">
+      <div class="section-title">
         <h2>Our Services</h2>
-        <p>Comprehensive technology solutions tailored to your needs and skill level</p>
+        <p>Comprehensive tech support solutions tailored to your needs</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-mobile-alt"></i>
           </div>
-          <h3>Device Setup</h3>
-          <p>Professional setup of phones, tablets, laptops, and smart TVs with personalized guidance.</p>
+          <div class="service-content">
+            <h3>Device Setup</h3>
+            <p>Phones, tablets, laptops & TVs — set up the right way with personalized guidance.</p>
+          </div>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-wifi"></i>
           </div>
-          <h3>Wi-Fi & Internet</h3>
-          <p>Optimize your home network, fix connectivity issues, and ensure reliable internet access.</p>
+          <div class="service-content">
+            <h3>Wi-Fi & Internet</h3>
+            <p>Fix dropped connections, slow speeds, and router issues for reliable internet access.</p>
+          </div>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-key"></i>
           </div>
-          <h3>Account Recovery</h3>
-          <p>Secure recovery of email, social media, and important account access with privacy protection.</p>
+          <div class="service-content">
+            <h3>Account Recovery</h3>
+            <p>Securely restore access to email, social media, and other important accounts.</p>
+          </div>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-shield-virus"></i>
           </div>
-          <h3>Security & Privacy</h3>
-          <p>Virus removal, malware protection, and security setup to keep your digital life safe.</p>
+          <div class="service-content">
+            <h3>Virus & Security</h3>
+            <p>Scan, remove malware, and set up safety steps to protect your devices and data.</p>
+          </div>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-home"></i>
           </div>
-          <h3>Smart Home</h3>
-          <p>Installation and configuration of smart devices, cameras, assistants, and home automation.</p>
+          <div class="service-content">
+            <h3>Smart Home Help</h3>
+            <p>Install and configure Alexa, Ring, smart plugs, cameras and other smart devices.</p>
+          </div>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-users"></i>
           </div>
-          <h3>Workshops</h3>
-          <p>Group training sessions on smartphone basics, internet safety, and scam awareness.</p>
+          <div class="service-content">
+            <h3>Workshops</h3>
+            <p>Group sessions: scam awareness, smartphone basics, internet safety and more.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Clients Helped</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Satisfaction Rate</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Support Available</p>
+        </div>
+        <div class="stat-item">
+          <h3>15min</h3>
+          <p>Avg Response Time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-content">
+          <h2>About TechEase</h2>
+          <p>TechEase is a locally owned, senior-focused tech support service founded by Victor Duarte. We prioritize patience, clarity, and real, hands-on solutions — not scripts or sales.</p>
+          <p>Our mission is to bridge the digital divide by making technology accessible and less intimidating for seniors and community members of all technical skill levels.</p>
+          <ul class="about-features">
+            <li><i class="fas fa-check-circle"></i> Free initial consultation</li>
+            <li><i class="fas fa-check-circle"></i> On-site & remote help</li>
+            <li><i class="fas fa-check-circle"></i> Group workshops & staff training</li>
+            <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
+            <li><i class="fas fa-check-circle"></i> No long-term contracts</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="TechEase helping a resident" class="about-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Clients Say</h2>
+        <p>Don't just take our word for it - hear from our satisfied customers</p>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-slide">
+          <div class="testimonial-text">
+            Victor helped my mother set up her phone and explained everything — so patient and kind. She's now confidently video calling her grandchildren!
+          </div>
+          <div class="testimonial-author">M. Henderson</div>
+          <div class="testimonial-role">Daughter of Client</div>
+        </div>
+        <div class="testimonial-nav">
+          <div class="testimonial-dot active"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>Reach out for a free consultation or to schedule a service</p>
+      </div>
+      <div class="contact-inner">
+        <div class="contact-info">
+          <h2>Get Help Now</h2>
+          <p>Free consultation available. We come to you or connect remotely. Contact us today!</p>
+          <ul class="contact-details">
+            <li>
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone</strong><br>
+                (719) 253-2733
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong><br>
+                gettechease@gmail.com
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Service Area</strong><br>
+                St. Louis and surrounding communities
+              </div>
+            </li>
+          </ul>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="https://formsubmit.co/gettechease@gmail.com" method="POST" id="contactForm">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" class="form-control">
+                <option value="">Select a service</option>
+                <option value="device-setup">Device Setup</option>
+                <option value="wifi-internet">Wi-Fi & Internet</option>
+                <option value="account-recovery">Account Recovery</option>
+                <option value="virus-security">Virus & Security</option>
+                <option value="smart-home">Smart Home Help</option>
+                <option value="workshop">Workshop</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your issue</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -703,38 +1307,31 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-col">
-          <div class="brand">
-            <div class="logo">
-              <div class="logo-symbol"></div>
-            </div>
-            <div class="brand-text">
-              <div class="brand-name">TechEase</div>
-              <div class="brand-tagline">TECHNOLOGY SOLUTIONS</div>
-            </div>
-          </div>
-          <p style="color: #94a3b8; margin-top: 16px; font-size: 14px; line-height: 1.6;">Making technology accessible and stress-free for seniors and communities through patient, professional support.</p>
+          <h3>TechEase</h3>
+          <p>Making technology simple and accessible for seniors and communities through patient, friendly support.</p>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
           <ul class="footer-links">
             <li><a href="#services">Device Setup</a></li>
             <li><a href="#services">Wi-Fi & Internet</a></li>
             <li><a href="#services">Account Recovery</a></li>
-            <li><a href="#services">Security & Privacy</a></li>
-            <li><a href="#services">Smart Home</a></li>
+            <li><a href="#services">Virus & Security</a></li>
+            <li><a href="#services">Smart Home Help</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#services">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
+          <h3>Contact Info</h3>
           <ul class="footer-links">
             <li><i class="fas fa-phone"></i> (719) 253-2733</li>
             <li><i class="fas fa-envelope"></i> gettechease@gmail.com</li>
@@ -743,7 +1340,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2024 TechEase. All rights reserved. Technology made simple.</p>
+        <p>&copy; <span id="year"></span> TechEase. All rights reserved. Technology made simple.</p>
       </div>
     </div>
   </footer>
@@ -762,11 +1359,11 @@
       </div>
       <div class="chat-body" id="chat-body">
         <div class="chat-message bot">
-          Hello! I'm your TechEase assistant. I can help you with service information, pricing, scheduling, or answer any questions about our tech support.
+          Hi there! I'm your TechEase assistant. How can I help you with technology today? You can ask me about services, pricing, or schedule a consultation.
         </div>
       </div>
       <div class="chat-input">
-        <input type="text" id="chat-input" placeholder="Type your message here...">
+        <input type="text" id="chat-input" placeholder="Type your message...">
         <button class="chat-send" id="chat-send">
           <i class="fas fa-paper-plane"></i>
         </button>
@@ -774,65 +1371,93 @@
     </div>
   </div>
 
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <script>
-    // Chatbot with proper keyword matching
-    const chatBot = {
-      responses: {
-        greeting: [
-          "Hello! I'm your TechEase assistant. How can I help you with technology today?",
-          "Hi there! I'm here to help with all your tech support needs. What can I assist you with?"
-        ],
-        pricing: `💲 **Our Pricing:**\n• Basic Service (30min): $20\n• Standard Service (1hr): $35-45\n• Extended Service: $60-75\n• Workshops: $75-150\n\nAll services include a free initial consultation!`,
-        services: `🛠️ **Our Services:**\n• Device Setup (Phones, Tablets, Computers)\n• Wi-Fi & Internet Troubleshooting\n• Account & Password Recovery\n• Virus Removal & Security\n• Smart Home Device Setup\n• Group Workshops & Training\n\nAll services include patient, friendly support tailored to your needs.`,
-        contact: `📞 **Contact Information:**\n• Phone: (719) 253-2733\n• Email: gettechease@gmail.com\n• Service Area: St. Louis & surrounding communities\n• Owner: Victor Duarte`,
-        hours: `🕘 **Business Hours:**\n• Monday - Saturday: 8:00 AM - 8:00 PM\n• Emergency support available for existing clients\n• Free consultations available`,
-        consultation: `📅 **Free Consultation Includes:**\n• Assessment of your tech issues\n• Solution recommendations\n• No-obligation pricing quote\n• Flexible scheduling options\n\nCall (719) 253-2733 to schedule!`,
-        help: `❓ **I can help with:**\n• Service information and pricing\n• Scheduling consultations\n• Contact details\n• Business hours\n• General tech questions\n\nJust ask me anything!`
-      },
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      getResponse(message) {
-        const msg = message.toLowerCase().trim();
-        
-        // Exact match first
-        if (msg === 'pricing' || msg === 'price' || msg === 'cost' || msg === 'how much') {
-          return this.responses.pricing;
-        }
-        if (msg === 'services' || msg === 'service' || msg === 'what do you offer') {
-          return this.responses.services;
-        }
-        if (msg === 'contact' || msg === 'phone' || msg === 'email' || msg === 'number') {
-          return this.responses.contact;
-        }
-        if (msg === 'hours' || msg === 'when are you open' || msg === 'availability') {
-          return this.responses.hours;
-        }
-        if (msg === 'consultation' || msg === 'consult' || msg === 'free' || msg === 'schedule') {
-          return this.responses.consultation;
-        }
-        if (msg === 'help' || msg === 'what can you do' || msg === 'support') {
-          return this.responses.help;
-        }
-        if (msg.includes('hi') || msg.includes('hello') || msg.includes('hey')) {
-          return this.responses.greeting[Math.floor(Math.random() * this.responses.greeting.length)];
-        }
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileClose = document.querySelector('.mobile-close');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.add('active');
+    });
+    
+    mobileClose.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+    });
 
-        // Fallback for unrecognized messages
-        return "I'm here to help with TechEase services! You can ask me about:\n• Pricing and services\n• Contact information\n• Business hours\n• Scheduling consultations\n\nWhat would you like to know?";
-      }
-    };
-
-    // Chat functionality
+    // Chat widget functionality
     const chatBtn = document.querySelector('.chat-btn');
     const chatBox = document.querySelector('.chat-box');
     const chatClose = document.querySelector('.chat-close');
     const chatInput = document.getElementById('chat-input');
     const chatSend = document.getElementById('chat-send');
     const chatBody = document.getElementById('chat-body');
+    
+    chatBtn.addEventListener('click', () => {
+      chatBox.classList.toggle('active');
+      if (chatBox.classList.contains('active')) {
+        chatInput.focus();
+      }
+    });
+    
+    chatClose.addEventListener('click', () => {
+      chatBox.classList.remove('active');
+    });
 
-    function addMessage(text, isUser = false) {
+    // Enhanced chatbot responses with better keyword matching
+    const botResponses = {
+      greeting: ["Hello! I'm your TechEase assistant. How can I help you with technology today?", "Hi there! Ready to make technology easier? What can I help you with?"],
+      services: "We offer: 📱 Device Setup ($20-45), 📶 Wi-Fi Help ($35-45), 🔑 Account Recovery ($20-35), 🛡️ Virus Removal ($45-60), 🏠 Smart Home Setup ($35-75), and 👥 Group Workshops ($75-150). All services include free consultation!",
+      pricing: "💰 Our pricing: Basic (30min) $20, Standard (1hr) $35-45, Extended $60-75. Workshops: $75-150. Free initial consultation included with all services!",
+      contact: "📞 Call Victor at (719) 253-2733 or 📧 email gettechease@gmail.com. We serve St. Louis and surrounding areas with on-site visits and remote support.",
+      hours: "🕘 We're available Monday-Saturday 8AM-8PM. Emergency support available outside hours for existing clients.",
+      owner: "👨‍💼 TechEase is owned by Victor Duarte - patient, friendly tech support specialist focused on seniors and communities in the St. Louis area.",
+      consultation: "🎯 Free consultations include: assessment of your tech issues, solution recommendations, and no-obligation pricing. Call (719) 253-2733 to schedule!",
+      help: "I can help with: • Service information • Pricing • Scheduling consultations • Contact details • Business hours • General tech questions",
+      default: "I'd love to help! For specific questions about services, pricing, or to schedule a consultation, please call Victor at (719) 253-2733 or email gettechease@gmail.com"
+    };
+
+    function getBotResponse(userMessage) {
+      const message = userMessage.toLowerCase().trim();
+      
+      // Exact match first
+      if (message === 'pricing' || message === 'price' || message === 'cost' || message === 'how much') {
+        return botResponses.pricing;
+      }
+      if (message === 'services' || message === 'service' || message === 'what do you offer') {
+        return botResponses.services;
+      }
+      if (message === 'contact' || message === 'phone' || message === 'email' || message === 'number') {
+        return botResponses.contact;
+      }
+      if (message === 'hours' || message === 'when are you open' || message === 'availability') {
+        return botResponses.hours;
+      }
+      if (message === 'consultation' || message === 'consult' || message === 'free' || message === 'schedule') {
+        return botResponses.consultation;
+      }
+      if (message === 'help' || message === 'what can you do' || message === 'support') {
+        return botResponses.help;
+      }
+      if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
+        return botResponses.greeting[Math.floor(Math.random() * botResponses.greeting.length)];
+      }
+
+      return botResponses.default;
+    }
+
+    function addMessage(message, isUser = false) {
       const messageDiv = document.createElement('div');
       messageDiv.className = `chat-message ${isUser ? 'user' : 'bot'}`;
-      messageDiv.textContent = text;
+      messageDiv.textContent = message;
       chatBody.appendChild(messageDiv);
       chatBody.scrollTop = chatBody.scrollHeight;
     }
@@ -843,51 +1468,84 @@
         addMessage(message, true);
         chatInput.value = '';
         
+        // Bot response after short delay
         setTimeout(() => {
-          const response = chatBot.getResponse(message);
+          const response = getBotResponse(message);
           addMessage(response);
-        }, 500);
+        }, 800);
       }
     }
 
-    // Event listeners
-    chatBtn.addEventListener('click', () => {
-      chatBox.classList.toggle('active');
-      if (chatBox.classList.contains('active')) {
-        chatInput.focus();
-      }
-    });
-
-    chatClose.addEventListener('click', () => {
-      chatBox.classList.remove('active');
-    });
-
     chatSend.addEventListener('click', sendMessage);
-
     chatInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         sendMessage();
       }
     });
 
-    // Open chat from consultation button
-    document.getElementById('open-chat').addEventListener('click', () => {
-      chatBox.classList.add('active');
-      chatInput.focus();
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('active');
+      } else {
+        backToTop.classList.remove('active');
+      }
+    });
+    
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Smooth scrolling for navigation
+    // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
+        
+        if (this.getAttribute('href') === '#') return;
+        
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
           });
+          
+          // Close mobile menu if open
+          mobileNav.classList.remove('active');
         }
       });
+    });
+
+    // Testimonial slider
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    
+    testimonialDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        // Remove active class from all dots
+        testimonialDots.forEach(d => d.classList.remove('active'));
+        // Add active class to clicked dot
+        dot.classList.add('active');
+      });
+    });
+
+    // Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      contactForm.reset();
+    });
+
+    // Open consultation popup
+    const openChatBtn = document.getElementById('open-chat');
+    
+    openChatBtn.addEventListener('click', () => {
+      chatBox.classList.add('active');
+      chatInput.focus();
     });
   </script>
 </body>
