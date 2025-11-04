@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TechEase | Fast & Friendly Tech Support for Seniors & Communities</title>
-  <meta name="description" content="TechEase provides fast, friendly tech support for seniors & communities — device setup, Wi-Fi, account recovery, and workshops. Free consultations." />
+  <title>TechEase | Mobile Tech Support for Seniors, Businesses & Individuals</title>
+  <meta name="description" content="TechEase provides 24/7 bilingual tech support for seniors, small businesses & individuals. Device setup, Wi-Fi, security, and IT solutions. Servicios en español." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -44,6 +44,33 @@
       padding: 0 20px;
     }
 
+    /* Language Toggle */
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+
     /* Header & Navigation */
     .site-header {
       background: rgba(255, 255, 255, 0.95);
@@ -70,7 +97,6 @@
       gap: 12px;
     }
 
-    /* NEW PREMIUM LOGO */
     .logo {
       width: 50px;
       height: 50px;
@@ -270,6 +296,18 @@
       transform: perspective(1000px) rotateY(0) rotateX(0);
     }
 
+    /* 24/7 Badge */
+    .badge-24-7 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
     /* Features Section */
     .features {
       padding: 100px 0;
@@ -399,6 +437,116 @@
       font-size: 1.3rem;
     }
 
+    /* About Section */
+    .about {
+      padding: 100px 0;
+      background: var(--light);
+    }
+
+    .about-inner {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .about-features {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .about-features li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .about-features li i {
+      color: var(--success);
+      font-size: 1.2rem;
+    }
+
+    .about-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* History Timeline */
+    .history-timeline {
+      margin-top: 50px;
+    }
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-year {
+      background: var(--gradient);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .timeline-content {
+      padding: 15px 20px;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-left: 20px;
+      flex: 1;
+    }
+
+    /* Stats Section */
+    .stats {
+      padding: 80px 0;
+      background: var(--gradient);
+      color: white;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-item p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
     /* Testimonials */
     .testimonials {
       padding: 100px 0;
@@ -474,85 +622,6 @@
 
     .testimonial-dot.active {
       background: var(--primary);
-    }
-
-    /* About Section */
-    .about {
-      padding: 100px 0;
-    }
-
-    .about-inner {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .about-content {
-      flex: 1;
-    }
-
-    .about-content h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .about-content p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .about-features {
-      list-style: none;
-      margin: 25px 0;
-    }
-
-    .about-features li {
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .about-features li i {
-      color: var(--success);
-      font-size: 1.2rem;
-    }
-
-    .about-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-hover);
-    }
-
-    /* Stats Section */
-    .stats {
-      padding: 80px 0;
-      background: var(--gradient);
-      color: white;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-
-    .stat-item h3 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .stat-item p {
-      font-size: 1.1rem;
-      opacity: 0.9;
     }
 
     /* Contact Section */
@@ -946,6 +1015,13 @@
         font-size: 30px;
         cursor: pointer;
       }
+
+      .language-toggle {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 15px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -968,6 +1044,15 @@
       .chat-box {
         width: 300px;
       }
+
+      .timeline-item {
+        flex-direction: column;
+      }
+
+      .timeline-content {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
 
     @media (max-width: 576px) {
@@ -985,30 +1070,55 @@
         right: -20px;
       }
     }
+
+    /* Language-specific styles */
+    [lang="es"] {
+      display: none;
+    }
+
+    body.spanish [lang="en"] {
+      display: none;
+    }
+
+    body.spanish [lang="es"] {
+      display: block;
+    }
   </style>
 </head>
 <body>
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <button class="lang-btn" id="languageToggle">
+      <i class="fas fa-globe"></i>
+      <span class="lang-text">Español</span>
+    </button>
+  </div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <!-- NEW PREMIUM LOGO -->
         <div class="logo">
           <div class="logo-symbol"></div>
         </div>
         <div class="brand-text">
           <h1>TechEase</h1>
-          <p class="tag">Technology Made Simple</p>
+          <p class="tag" lang="en">Technology Made Simple</p>
+          <p class="tag" lang="es">Tecnología Hecha Simple</p>
         </div>
       </div>
 
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#features">Why Us</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" lang="en">Home</a>
+        <a href="#home" lang="es">Inicio</a>
+        <a href="#services" lang="en">Services</a>
+        <a href="#services" lang="es">Servicios</a>
+        <a href="#about" lang="en">About</a>
+        <a href="#about" lang="es">Nosotros</a>
+        <a href="#testimonials" lang="en">Testimonials</a>
+        <a href="#testimonials" lang="es">Testimonios</a>
+        <a href="#contact" lang="en">Contact</a>
+        <a href="#contact" lang="es">Contacto</a>
       </nav>
       
       <button class="mobile-menu-btn">
@@ -1022,26 +1132,41 @@
     <button class="mobile-close">
       <i class="fas fa-times"></i>
     </button>
-    <a href="#home">Home</a>
-    <a href="#features">Why Us</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
+    <a href="#home" lang="en">Home</a>
+    <a href="#home" lang="es">Inicio</a>
+    <a href="#services" lang="en">Services</a>
+    <a href="#services" lang="es">Servicios</a>
+    <a href="#about" lang="en">About</a>
+    <a href="#about" lang="es">Nosotros</a>
+    <a href="#testimonials" lang="en">Testimonials</a>
+    <a href="#testimonials" lang="es">Testimonios</a>
+    <a href="#contact" lang="en">Contact</a>
+    <a href="#contact" lang="es">Contacto</a>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container hero-inner">
       <div class="hero-left">
-        <h2>Technology help, without the hassle</h2>
-        <p>Local, patient & trusted tech support for seniors and communities. On-site visits, remote help, and group workshops.</p>
+        <div class="badge-24-7">
+          <i class="fas fa-clock"></i>
+          <span lang="en">24/7 Mobile Tech Support Available</span>
+          <span lang="es">Soporte Técnico Móvil 24/7 Disponible</span>
+        </div>
+        <h2 lang="en">Technology help, without the hassle</h2>
+        <h2 lang="es">Ayuda tecnológica, sin complicaciones</h2>
+        <p lang="en">24/7 bilingual tech support for seniors, small businesses & individuals. On-site visits, remote help, and group workshops. English & Spanish speaking support.</p>
+        <p lang="es">Soporte técnico bilingüe 24/7 para personas mayores, pequeñas empresas e individuos. Visitas en sitio, ayuda remota y talleres grupales. Soporte en inglés y español.</p>
         <div class="hero-cta">
           <a class="btn primary" href="#contact">
-            <i class="fas fa-calendar-check"></i> Get Help Now
+            <i class="fas fa-calendar-check"></i>
+            <span lang="en">Get Help Now</span>
+            <span lang="es">Obtener Ayuda</span>
           </a>
           <button id="open-chat" class="btn outline">
-            <i class="fas fa-comments"></i> Free Consultation
+            <i class="fas fa-comments"></i>
+            <span lang="en">Free Consultation</span>
+            <span lang="es">Consulta Gratis</span>
           </button>
         </div>
       </div>
@@ -1055,30 +1180,38 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-title">
-        <h2>Why Choose TechEase</h2>
-        <p>We make technology accessible and stress-free for everyone</p>
+        <h2 lang="en">Why Choose TechEase</h2>
+        <h2 lang="es">Por Qué Elegir TechEase</h2>
+        <p lang="en">We make technology accessible and stress-free for everyone</p>
+        <p lang="es">Hacemos la tecnología accesible y sin estrés para todos</p>
       </div>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-user-clock"></i>
           </div>
-          <h3>Patient & Friendly</h3>
-          <p>We take the time to explain things clearly and ensure you're comfortable with your technology.</p>
+          <h3 lang="en">Patient & Friendly</h3>
+          <h3 lang="es">Paciente y Amigable</h3>
+          <p lang="en">We take the time to explain things clearly and ensure you're comfortable with your technology.</p>
+          <p lang="es">Nos tomamos el tiempo para explicar las cosas claramente y asegurarnos de que esté cómodo con su tecnología.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-home"></i>
+            <i class="fas fa-mobile-alt"></i>
           </div>
-          <h3>On-Site Service</h3>
-          <p>We come to you! Home visits, community centers, or remote assistance - whatever works best.</p>
+          <h3 lang="en">24/7 Mobile Support</h3>
+          <h3 lang="es">Soporte Móvil 24/7</h3>
+          <p lang="en">Emergency tech support whenever you need it. We come to you anywhere in the service area.</p>
+          <p lang="es">Soporte técnico de emergencia cuando lo necesite. Vamos a usted en cualquier lugar del área de servicio.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-language"></i>
           </div>
-          <h3>Security Focused</h3>
-          <p>We prioritize your digital safety with scam awareness and security best practices.</p>
+          <h3 lang="en">Bilingual Support</h3>
+          <h3 lang="es">Soporte Bilingüe</h3>
+          <p lang="en">Fluent English and Spanish support. We understand both technical and language barriers.</p>
+          <p lang="es">Soporte fluido en inglés y español. Entendemos tanto las barreras técnicas como las lingüísticas.</p>
         </div>
       </div>
     </div>
@@ -1088,8 +1221,10 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-title">
-        <h2>Our Services</h2>
-        <p>Comprehensive tech support solutions tailored to your needs</p>
+        <h2 lang="en">Our Services</h2>
+        <h2 lang="es">Nuestros Servicios</h2>
+        <p lang="en">Comprehensive tech support solutions for seniors, businesses, and individuals</p>
+        <p lang="es">Soluciones integrales de soporte técnico para personas mayores, empresas e individuos</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
@@ -1097,8 +1232,10 @@
             <i class="fas fa-mobile-alt"></i>
           </div>
           <div class="service-content">
-            <h3>Device Setup</h3>
-            <p>Phones, tablets, laptops & TVs — set up the right way with personalized guidance.</p>
+            <h3 lang="en">Device Setup</h3>
+            <h3 lang="es">Configuración de Dispositivos</h3>
+            <p lang="en">Phones, tablets, laptops & TVs — set up the right way with personalized guidance.</p>
+            <p lang="es">Teléfonos, tabletas, laptops y TVs — configurados correctamente con guía personalizada.</p>
           </div>
         </div>
         <div class="service-card">
@@ -1106,8 +1243,10 @@
             <i class="fas fa-wifi"></i>
           </div>
           <div class="service-content">
-            <h3>Wi-Fi & Internet</h3>
-            <p>Fix dropped connections, slow speeds, and router issues for reliable internet access.</p>
+            <h3 lang="en">Wi-Fi & Internet</h3>
+            <h3 lang="es">Wi-Fi e Internet</h3>
+            <p lang="en">Fix dropped connections, slow speeds, and router issues for reliable internet access.</p>
+            <p lang="es">Reparar conexiones interrumpidas, velocidades lentas y problemas del router para acceso confiable a internet.</p>
           </div>
         </div>
         <div class="service-card">
@@ -1115,8 +1254,10 @@
             <i class="fas fa-key"></i>
           </div>
           <div class="service-content">
-            <h3>Account Recovery</h3>
-            <p>Securely restore access to email, social media, and other important accounts.</p>
+            <h3 lang="en">Account Recovery</h3>
+            <h3 lang="es">Recuperación de Cuentas</h3>
+            <p lang="en">Securely restore access to email, social media, and other important accounts.</p>
+            <p lang="es">Restaurar seguramente el acceso a email, redes sociales y otras cuentas importantes.</p>
           </div>
         </div>
         <div class="service-card">
@@ -1124,8 +1265,10 @@
             <i class="fas fa-shield-virus"></i>
           </div>
           <div class="service-content">
-            <h3>Virus & Security</h3>
-            <p>Scan, remove malware, and set up safety steps to protect your devices and data.</p>
+            <h3 lang="en">Business IT Support</h3>
+            <h3 lang="es">Soporte IT para Empresas</h3>
+            <p lang="en">Complete IT solutions for small businesses: networks, security, and system setup.</p>
+            <p lang="es">Soluciones IT completas para pequeñas empresas: redes, seguridad y configuración de sistemas.</p>
           </div>
         </div>
         <div class="service-card">
@@ -1133,8 +1276,10 @@
             <i class="fas fa-home"></i>
           </div>
           <div class="service-content">
-            <h3>Smart Home Help</h3>
-            <p>Install and configure Alexa, Ring, smart plugs, cameras and other smart devices.</p>
+            <h3 lang="en">Smart Home Help</h3>
+            <h3 lang="es">Ayuda con Casa Inteligente</h3>
+            <p lang="en">Install and configure Alexa, Ring, smart plugs, cameras and other smart devices.</p>
+            <p lang="es">Instalar y configurar Alexa, Ring, enchufes inteligentes, cámaras y otros dispositivos inteligentes.</p>
           </div>
         </div>
         <div class="service-card">
@@ -1142,9 +1287,84 @@
             <i class="fas fa-users"></i>
           </div>
           <div class="service-content">
-            <h3>Workshops</h3>
-            <p>Group sessions: scam awareness, smartphone basics, internet safety and more.</p>
+            <h3 lang="en">Bilingual Workshops</h3>
+            <h3 lang="es">Talleres Bilingües</h3>
+            <p lang="en">Group sessions: scam awareness, smartphone basics, internet safety in English & Spanish.</p>
+            <p lang="es">Sesiones grupales: conciencia de estafas, básicos de smartphones, seguridad en internet en inglés y español.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2 lang="en">Our Story</h2>
+        <h2 lang="es">Nuestra Historia</h2>
+        <p lang="en">From Denver beginnings to St. Louis service excellence</p>
+        <p lang="es">Desde los comienzos en Denver hasta la excelencia en servicio en St. Louis</p>
+      </div>
+      <div class="about-inner">
+        <div class="about-content">
+          <h2 lang="en">About TechEase</h2>
+          <h2 lang="es">Acerca de TechEase</h2>
+          <p lang="en">TechEase was founded in 2015 in Denver, Colorado by Victor Duarte with a simple mission: make technology accessible to everyone, regardless of age or technical background. What started as helping neighbors with computer issues has grown into a comprehensive mobile tech support service serving seniors, small businesses, and individuals throughout the St. Louis area.</p>
+          <p lang="es">TechEase fue fundada en 2015 en Denver, Colorado por Victor Duarte con una misión simple: hacer la tecnología accesible para todos, independientemente de la edad o conocimientos técnicos. Lo que comenzó ayudando a vecinos con problemas de computadora ha crecido hasta convertirse en un servicio integral de soporte técnico móvil que atiende a personas mayores, pequeñas empresas e individuos en toda el área de St. Louis.</p>
+          
+          <p lang="en">As a bilingual technician (English & Spanish), Victor recognized the unique challenges faced by non-technical users and non-English speakers in navigating today's digital world. This insight shaped TechEase's patient, clear, and culturally sensitive approach to tech support.</p>
+          <p lang="es">Como técnico bilingüe (inglés y español), Victor reconoció los desafíos únicos que enfrentan los usuarios no técnicos y los que no hablan inglés al navegar en el mundo digital actual. Esta perspectiva moldeó el enfoque paciente, claro y culturalmente sensible de TechEase hacia el soporte técnico.</p>
+
+          <div class="history-timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2015</div>
+              <div class="timeline-content">
+                <h4 lang="en">Founded in Denver</h4>
+                <h4 lang="es">Fundada en Denver</h4>
+                <p lang="en">Started helping neighbors and local seniors with basic computer and phone issues</p>
+                <p lang="es">Comenzó ayudando a vecinos y personas mayores locales con problemas básicos de computadoras y teléfonos</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2018</div>
+              <div class="timeline-content">
+                <h4 lang="en">Expanded Services</h4>
+                <h4 lang="es">Servicios Expandidos</h4>
+                <p lang="en">Added small business IT support and bilingual workshops to service offerings</p>
+                <p lang="es">Agregó soporte IT para pequeñas empresas y talleres bilingües a la oferta de servicios</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2020</div>
+              <div class="timeline-content">
+                <h4 lang="en">Mobile 24/7 Support</h4>
+                <h4 lang="es">Soporte Móvil 24/7</h4>
+                <p lang="en">Launched 24/7 emergency tech support and expanded to St. Louis market</p>
+                <p lang="es">Lanzó soporte técnico de emergencia 24/7 y se expandió al mercado de St. Louis</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024</div>
+              <div class="timeline-content">
+                <h4 lang="en">Growing Community Presence</h4>
+                <h4 lang="es">Creciente Presencia Comunitaria</h4>
+                <p lang="en">Serving 500+ clients with focus on seniors, bilingual households, and small businesses</p>
+                <p lang="es">Atendiendo a 500+ clientes con enfoque en personas mayores, hogares bilingües y pequeñas empresas</p>
+              </div>
+            </div>
+          </div>
+
+          <ul class="about-features">
+            <li><i class="fas fa-check-circle"></i> <span lang="en">Free initial consultation</span><span lang="es">Consulta inicial gratuita</span></li>
+            <li><i class="fas fa-check-circle"></i> <span lang="en">24/7 mobile support available</span><span lang="es">Soporte móvil 24/7 disponible</span></li>
+            <li><i class="fas fa-check-circle"></i> <span lang="en">Bilingual English/Spanish support</span><span lang="es">Soporte bilingüe inglés/español</span></li>
+            <li><i class="fas fa-check-circle"></i> <span lang="en">Serving seniors, businesses & individuals</span><span lang="es">Atendiendo personas mayores, empresas e individuos</span></li>
+            <li><i class="fas fa-check-circle"></i> <span lang="en">No long-term contracts</span><span lang="es">Sin contratos a largo plazo</span></li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="TechEase helping a resident" class="about-img" />
         </div>
       </div>
     </div>
@@ -1156,42 +1376,23 @@
       <div class="stats-grid">
         <div class="stat-item">
           <h3>500+</h3>
-          <p>Clients Helped</p>
+          <p lang="en">Clients Helped</p>
+          <p lang="es">Clientes Ayudados</p>
         </div>
         <div class="stat-item">
           <h3>98%</h3>
-          <p>Satisfaction Rate</p>
+          <p lang="en">Satisfaction Rate</p>
+          <p lang="es">Tasa de Satisfacción</p>
         </div>
         <div class="stat-item">
           <h3>24/7</h3>
-          <p>Support Available</p>
+          <p lang="en">Support Available</p>
+          <p lang="es">Soporte Disponible</p>
         </div>
         <div class="stat-item">
-          <h3>15min</h3>
-          <p>Avg Response Time</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-inner">
-        <div class="about-content">
-          <h2>About TechEase</h2>
-          <p>TechEase is a locally owned, senior-focused tech support service founded by Victor Duarte. We prioritize patience, clarity, and real, hands-on solutions — not scripts or sales.</p>
-          <p>Our mission is to bridge the digital divide by making technology accessible and less intimidating for seniors and community members of all technical skill levels.</p>
-          <ul class="about-features">
-            <li><i class="fas fa-check-circle"></i> Free initial consultation</li>
-            <li><i class="fas fa-check-circle"></i> On-site & remote help</li>
-            <li><i class="fas fa-check-circle"></i> Group workshops & staff training</li>
-            <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
-            <li><i class="fas fa-check-circle"></i> No long-term contracts</li>
-          </ul>
-        </div>
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="TechEase helping a resident" class="about-img" />
+          <h3>2</h3>
+          <p lang="en">Languages</p>
+          <p lang="es">Idiomas</p>
         </div>
       </div>
     </div>
@@ -1201,16 +1402,22 @@
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-title">
-        <h2>What Our Clients Say</h2>
-        <p>Don't just take our word for it - hear from our satisfied customers</p>
+        <h2 lang="en">What Our Clients Say</h2>
+        <h2 lang="es">Lo Que Dicen Nuestros Clientes</h2>
+        <p lang="en">Don't just take our word for it - hear from our satisfied customers</p>
+        <p lang="es">No solo tome nuestra palabra - escuche a nuestros clientes satisfechos</p>
       </div>
       <div class="testimonials-container">
         <div class="testimonial-slide">
-          <div class="testimonial-text">
+          <div class="testimonial-text" lang="en">
             Victor helped my mother set up her phone and explained everything — so patient and kind. She's now confidently video calling her grandchildren!
           </div>
+          <div class="testimonial-text" lang="es">
+            Victor ayudó a mi madre a configurar su teléfono y explicó todo — tan paciente y amable. ¡Ahora hace videollamadas con confianza a sus nietos!
+          </div>
           <div class="testimonial-author">M. Henderson</div>
-          <div class="testimonial-role">Daughter of Client</div>
+          <div class="testimonial-role" lang="en">Daughter of Client</div>
+          <div class="testimonial-role" lang="es">Hija de Cliente</div>
         </div>
         <div class="testimonial-nav">
           <div class="testimonial-dot active"></div>
@@ -1225,33 +1432,54 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-title">
-        <h2>Get In Touch</h2>
-        <p>Reach out for a free consultation or to schedule a service</p>
+        <h2 lang="en">Get In Touch</h2>
+        <h2 lang="es">Póngase en Contacto</h2>
+        <p lang="en">Reach out for a free consultation or to schedule a service</p>
+        <p lang="es">Comuníquese para una consulta gratuita o para programar un servicio</p>
       </div>
       <div class="contact-inner">
         <div class="contact-info">
-          <h2>Get Help Now</h2>
-          <p>Free consultation available. We come to you or connect remotely. Contact us today!</p>
+          <h2 lang="en">Get Help Now</h2>
+          <h2 lang="es">Obtenga Ayuda Ahora</h2>
+          <p lang="en">Free consultation available. We come to you or connect remotely. Contact us today!</p>
+          <p lang="es">Consulta gratuita disponible. Vamos a usted o nos conectamos remotamente. ¡Contáctenos hoy!</p>
           <ul class="contact-details">
             <li>
               <i class="fas fa-phone"></i>
               <div>
-                <strong>Phone</strong><br>
+                <strong lang="en">Phone</strong>
+                <strong lang="es">Teléfono</strong>
+                <br>
                 (719) 253-2733
               </div>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
               <div>
-                <strong>Email</strong><br>
+                <strong lang="en">Email</strong>
+                <strong lang="es">Correo</strong>
+                <br>
                 gettechease@gmail.com
               </div>
             </li>
             <li>
               <i class="fas fa-map-marker-alt"></i>
               <div>
-                <strong>Service Area</strong><br>
-                St. Louis and surrounding communities
+                <strong lang="en">Service Area</strong>
+                <strong lang="es">Área de Servicio</strong>
+                <br>
+                <span lang="en">St. Louis and surrounding communities</span>
+                <span lang="es">St. Louis y comunidades circundantes</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong lang="en">Available</strong>
+                <strong lang="es">Disponible</strong>
+                <br>
+                <span lang="en">24/7 Emergency Support</span>
+                <span lang="es">Soporte de Emergencia 24/7</span>
               </div>
             </li>
           </ul>
@@ -1265,36 +1493,51 @@
           <form action="https://formsubmit.co/gettechease@gmail.com" method="POST" id="contactForm">
             <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
-              <label for="name">Full Name</label>
+              <label for="name" lang="en">Full Name</label>
+              <label for="name" lang="es">Nombre Completo</label>
               <input type="text" id="name" name="name" class="form-control" required>
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
+              <label for="email" lang="en">Email Address</label>
+              <label for="email" lang="es">Correo Electrónico</label>
               <input type="email" id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number</label>
+              <label for="phone" lang="en">Phone Number</label>
+              <label for="phone" lang="es">Número de Teléfono</label>
               <input type="tel" id="phone" name="phone" class="form-control">
             </div>
             <div class="form-group">
-              <label for="service">Service Needed</label>
+              <label for="service" lang="en">Service Needed</label>
+              <label for="service" lang="es">Servicio Necesitado</label>
               <select id="service" name="service" class="form-control">
-                <option value="">Select a service</option>
-                <option value="device-setup">Device Setup</option>
-                <option value="wifi-internet">Wi-Fi & Internet</option>
-                <option value="account-recovery">Account Recovery</option>
-                <option value="virus-security">Virus & Security</option>
-                <option value="smart-home">Smart Home Help</option>
-                <option value="workshop">Workshop</option>
-                <option value="other">Other</option>
+                <option value="" lang="en">Select a service</option>
+                <option value="" lang="es">Seleccione un servicio</option>
+                <option value="device-setup" lang="en">Device Setup</option>
+                <option value="device-setup" lang="es">Configuración de Dispositivos</option>
+                <option value="wifi-internet" lang="en">Wi-Fi & Internet</option>
+                <option value="wifi-internet" lang="es">Wi-Fi e Internet</option>
+                <option value="account-recovery" lang="en">Account Recovery</option>
+                <option value="account-recovery" lang="es">Recuperación de Cuentas</option>
+                <option value="business-support" lang="en">Business IT Support</option>
+                <option value="business-support" lang="es">Soporte IT para Empresas</option>
+                <option value="smart-home" lang="en">Smart Home Help</option>
+                <option value="smart-home" lang="es">Ayuda con Casa Inteligente</option>
+                <option value="workshop" lang="en">Workshop</option>
+                <option value="workshop" lang="es">Taller</option>
+                <option value="other" lang="en">Other</option>
+                <option value="other" lang="es">Otro</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Tell us about your issue</label>
+              <label for="message" lang="en">Tell us about your issue</label>
+              <label for="message" lang="es">Cuéntenos sobre su problema</label>
               <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn primary">
-              <i class="fas fa-paper-plane"></i> Send Message
+              <i class="fas fa-paper-plane"></i>
+              <span lang="en">Send Message</span>
+              <span lang="es">Enviar Mensaje</span>
             </button>
           </form>
         </div>
@@ -1308,39 +1551,44 @@
       <div class="footer-inner">
         <div class="footer-col">
           <h3>TechEase</h3>
-          <p>Making technology simple and accessible for seniors and communities through patient, friendly support.</p>
+          <p lang="en">Making technology simple and accessible for seniors, businesses, and individuals through patient, friendly bilingual support.</p>
+          <p lang="es">Haciendo la tecnología simple y accesible para personas mayores, empresas e individuos a través de soporte bilingüe paciente y amigable.</p>
         </div>
         <div class="footer-col">
-          <h3>Quick Links</h3>
+          <h3 lang="en">Quick Links</h3>
+          <h3 lang="es">Enlaces Rápidos</h3>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" lang="en">Home</a><a href="#home" lang="es">Inicio</a></li>
+            <li><a href="#services" lang="en">Services</a><a href="#services" lang="es">Servicios</a></li>
+            <li><a href="#about" lang="en">About Us</a><a href="#about" lang="es">Nosotros</a></li>
+            <li><a href="#testimonials" lang="en">Testimonials</a><a href="#testimonials" lang="es">Testimonios</a></li>
+            <li><a href="#contact" lang="en">Contact</a><a href="#contact" lang="es">Contacto</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Services</h3>
+          <h3 lang="en">Services</h3>
+          <h3 lang="es">Servicios</h3>
           <ul class="footer-links">
-            <li><a href="#services">Device Setup</a></li>
-            <li><a href="#services">Wi-Fi & Internet</a></li>
-            <li><a href="#services">Account Recovery</a></li>
-            <li><a href="#services">Virus & Security</a></li>
-            <li><a href="#services">Smart Home Help</a></li>
+            <li><a href="#services" lang="en">Device Setup</a><a href="#services" lang="es">Configuración</a></li>
+            <li><a href="#services" lang="en">Wi-Fi & Internet</a><a href="#services" lang="es">Wi-Fi e Internet</a></li>
+            <li><a href="#services" lang="en">Business IT</a><a href="#services" lang="es">IT para Empresas</a></li>
+            <li><a href="#services" lang="en">Security</a><a href="#services" lang="es">Seguridad</a></li>
+            <li><a href="#services" lang="en">Smart Home</a><a href="#services" lang="es">Casa Inteligente</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Contact Info</h3>
+          <h3 lang="en">Contact Info</h3>
+          <h3 lang="es">Información de Contacto</h3>
           <ul class="footer-links">
             <li><i class="fas fa-phone"></i> (719) 253-2733</li>
             <li><i class="fas fa-envelope"></i> gettechease@gmail.com</li>
             <li><i class="fas fa-map-marker-alt"></i> St. Louis, MO</li>
+            <li><i class="fas fa-clock"></i> <span lang="en">24/7 Support</span><span lang="es">Soporte 24/7</span></li>
           </ul>
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; <span id="year"></span> TechEase. All rights reserved. Technology made simple.</p>
+        <p>&copy; <span id="year"></span> TechEase. <span lang="en">All rights reserved. Technology made simple.</span><span lang="es">Todos los derechos reservados. Tecnología hecha simple.</span></p>
       </div>
     </div>
   </footer>
@@ -1352,18 +1600,23 @@
     </button>
     <div class="chat-box">
       <div class="chat-header">
-        <h3>TechEase Support</h3>
+        <h3 lang="en">TechEase Support</h3>
+        <h3 lang="es">Soporte TechEase</h3>
         <button class="chat-close">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="chat-body" id="chat-body">
-        <div class="chat-message bot">
+        <div class="chat-message bot" lang="en">
           Hi there! I'm your TechEase assistant. How can I help you with technology today? You can ask me about services, pricing, or schedule a consultation.
+        </div>
+        <div class="chat-message bot" lang="es">
+          ¡Hola! Soy su asistente de TechEase. ¿Cómo puedo ayudarle con tecnología hoy? Puede preguntarme sobre servicios, precios o programar una consulta.
         </div>
       </div>
       <div class="chat-input">
-        <input type="text" id="chat-input" placeholder="Type your message...">
+        <input type="text" id="chat-input" placeholder="Type your message..." lang="en">
+        <input type="text" id="chat-input-es" placeholder="Escriba su mensaje..." lang="es">
         <button class="chat-send" id="chat-send">
           <i class="fas fa-paper-plane"></i>
         </button>
@@ -1379,6 +1632,19 @@
   <script>
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Language Toggle Functionality
+    const languageToggle = document.getElementById('languageToggle');
+    const langText = document.querySelector('.lang-text');
+    
+    languageToggle.addEventListener('click', () => {
+      document.body.classList.toggle('spanish');
+      if (document.body.classList.contains('spanish')) {
+        langText.textContent = 'English';
+      } else {
+        langText.textContent = 'Español';
+      }
+    });
 
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -1398,13 +1664,18 @@
     const chatBox = document.querySelector('.chat-box');
     const chatClose = document.querySelector('.chat-close');
     const chatInput = document.getElementById('chat-input');
+    const chatInputEs = document.getElementById('chat-input-es');
     const chatSend = document.getElementById('chat-send');
     const chatBody = document.getElementById('chat-body');
+    
+    function getCurrentChatInput() {
+      return document.body.classList.contains('spanish') ? chatInputEs : chatInput;
+    }
     
     chatBtn.addEventListener('click', () => {
       chatBox.classList.toggle('active');
       if (chatBox.classList.contains('active')) {
-        chatInput.focus();
+        getCurrentChatInput().focus();
       }
     });
     
@@ -1414,74 +1685,110 @@
 
     // Enhanced chatbot responses with better keyword matching
     const botResponses = {
-      greeting: ["Hello! I'm your TechEase assistant. How can I help you with technology today?", "Hi there! Ready to make technology easier? What can I help you with?"],
-      services: "We offer: 📱 Device Setup ($20-45), 📶 Wi-Fi Help ($35-45), 🔑 Account Recovery ($20-35), 🛡️ Virus Removal ($45-60), 🏠 Smart Home Setup ($35-75), and 👥 Group Workshops ($75-150). All services include free consultation!",
-      pricing: "💰 Our pricing: Basic (30min) $20, Standard (1hr) $35-45, Extended $60-75. Workshops: $75-150. Free initial consultation included with all services!",
-      contact: "📞 Call Victor at (719) 253-2733 or 📧 email gettechease@gmail.com. We serve St. Louis and surrounding areas with on-site visits and remote support.",
-      hours: "🕘 We're available Monday-Saturday 8AM-8PM. Emergency support available outside hours for existing clients.",
-      owner: "👨‍💼 TechEase is owned by Victor Duarte - patient, friendly tech support specialist focused on seniors and communities in the St. Louis area.",
-      consultation: "🎯 Free consultations include: assessment of your tech issues, solution recommendations, and no-obligation pricing. Call (719) 253-2733 to schedule!",
-      help: "I can help with: • Service information • Pricing • Scheduling consultations • Contact details • Business hours • General tech questions",
-      default: "I'd love to help! For specific questions about services, pricing, or to schedule a consultation, please call Victor at (719) 253-2733 or email gettechease@gmail.com"
+      greeting: {
+        en: ["Hello! I'm your TechEase assistant. How can I help you with technology today?", "Hi there! Ready to make technology easier? What can I help you with?"],
+        es: ["¡Hola! Soy su asistente de TechEase. ¿Cómo puedo ayudarle con tecnología hoy?", "¡Hola! ¿Listo para hacer la tecnología más fácil? ¿Con qué puedo ayudarle?"]
+      },
+      services: {
+        en: "We offer: 📱 Device Setup ($20-45), 📶 Wi-Fi Help ($35-45), 🔑 Account Recovery ($20-35), 🏢 Business IT Support ($45-75), 🛡️ Security Solutions ($45-60), 🏠 Smart Home Setup ($35-75), and 👥 Bilingual Workshops ($75-150). All services include free consultation!",
+        es: "Ofrecemos: 📱 Configuración de Dispositivos ($20-45), 📶 Ayuda con Wi-Fi ($35-45), 🔑 Recuperación de Cuentas ($20-35), 🏢 Soporte IT para Empresas ($45-75), 🛡️ Soluciones de Seguridad ($45-60), 🏠 Configuración de Casa Inteligente ($35-75), y 👥 Talleres Bilingües ($75-150). ¡Todos los servicios incluyen consulta gratuita!"
+      },
+      pricing: {
+        en: "💰 Our pricing: Basic (30min) $20, Standard (1hr) $35-45, Extended $60-75. Business Services: $45-75. Workshops: $75-150. Free initial consultation included with all services!",
+        es: "💰 Nuestros precios: Básico (30min) $20, Estándar (1hr) $35-45, Extendido $60-75. Servicios Empresariales: $45-75. Talleres: $75-150. ¡Consulta inicial gratuita incluida con todos los servicios!"
+      },
+      contact: {
+        en: "📞 Call Victor at (719) 253-2733 or 📧 email gettechease@gmail.com. We serve St. Louis and surrounding areas with 24/7 mobile support in English & Spanish.",
+        es: "📞 Llame a Victor al (719) 253-2733 o 📧 envíe un correo a gettechease@gmail.com. Servimos St. Louis y áreas circundantes con soporte móvil 24/7 en inglés y español."
+      },
+      hours: {
+        en: "🕘 We're available 24/7 for emergency support! Regular hours: Monday-Saturday 8:00 AM - 8:00 PM. Emergency support available anytime for urgent issues.",
+        es: "🕘 ¡Estamos disponibles 24/7 para soporte de emergencia! Horario regular: Lunes-Sábado 8:00 AM - 8:00 PM. Soporte de emergencia disponible en cualquier momento para problemas urgentes."
+      }
     };
 
-    function getBotResponse(userMessage) {
+    function getBotResponse(userMessage, isSpanish = false) {
       const message = userMessage.toLowerCase().trim();
+      const lang = isSpanish ? 'es' : 'en';
       
       // Exact match first
-      if (message === 'pricing' || message === 'price' || message === 'cost' || message === 'how much') {
-        return botResponses.pricing;
+      if (message === 'pricing' || message === 'price' || message === 'cost' || message === 'how much' || message === 'precios' || message === 'precio' || message === 'costo' || message === 'cuánto') {
+        return botResponses.pricing[lang];
       }
-      if (message === 'services' || message === 'service' || message === 'what do you offer') {
-        return botResponses.services;
+      if (message === 'services' || message === 'service' || message === 'what do you offer' || message === 'servicios' || message === 'servicio' || message === 'qué ofrece') {
+        return botResponses.services[lang];
       }
-      if (message === 'contact' || message === 'phone' || message === 'email' || message === 'number') {
-        return botResponses.contact;
+      if (message === 'contact' || message === 'phone' || message === 'email' || message === 'number' || message === 'contacto' || message === 'teléfono' || message === 'correo' || message === 'número') {
+        return botResponses.contact[lang];
       }
-      if (message === 'hours' || message === 'when are you open' || message === 'availability') {
-        return botResponses.hours;
+      if (message === 'hours' || message === 'when are you open' || message === 'availability' || message === 'horas' || message === 'horario' || message === 'disponibilidad') {
+        return botResponses.hours[lang];
       }
-      if (message === 'consultation' || message === 'consult' || message === 'free' || message === 'schedule') {
-        return botResponses.consultation;
-      }
-      if (message === 'help' || message === 'what can you do' || message === 'support') {
-        return botResponses.help;
-      }
-      if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
-        return botResponses.greeting[Math.floor(Math.random() * botResponses.greeting.length)];
+      if (message.includes('hi') || message.includes('hello') || message.includes('hey') || message.includes('hola')) {
+        return botResponses.greeting[lang][Math.floor(Math.random() * botResponses.greeting[lang].length)];
       }
 
-      return botResponses.default;
+      return isSpanish ? 
+        "¡Me encantaría ayudar! Para preguntas específicas sobre servicios, precios o programar una consulta, por favor llame a Victor al (719) 253-2733 o envíe un correo a gettechease@gmail.com" :
+        "I'd love to help! For specific questions about services, pricing, or to schedule a consultation, please call Victor at (719) 253-2733 or email gettechease@gmail.com";
     }
 
     function addMessage(message, isUser = false) {
       const messageDiv = document.createElement('div');
       messageDiv.className = `chat-message ${isUser ? 'user' : 'bot'}`;
+      
+      // Add language attribute
+      const lang = document.body.classList.contains('spanish') ? 'es' : 'en';
+      messageDiv.setAttribute('lang', lang);
+      
       messageDiv.textContent = message;
       chatBody.appendChild(messageDiv);
       chatBody.scrollTop = chatBody.scrollHeight;
     }
 
     function sendMessage() {
-      const message = chatInput.value.trim();
+      const currentInput = getCurrentChatInput();
+      const message = currentInput.value.trim();
       if (message) {
         addMessage(message, true);
-        chatInput.value = '';
+        currentInput.value = '';
         
         // Bot response after short delay
         setTimeout(() => {
-          const response = getBotResponse(message);
+          const isSpanish = document.body.classList.contains('spanish');
+          const response = getBotResponse(message, isSpanish);
           addMessage(response);
         }, 800);
       }
     }
 
     chatSend.addEventListener('click', sendMessage);
-    chatInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        sendMessage();
-      }
+    
+    // Add event listeners to both language inputs
+    [chatInput, chatInputEs].forEach(input => {
+      input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          sendMessage();
+        }
+      });
     });
+
+    // Update chat input visibility based on language
+    function updateChatInputVisibility() {
+      if (document.body.classList.contains('spanish')) {
+        chatInput.style.display = 'none';
+        chatInputEs.style.display = 'block';
+      } else {
+        chatInput.style.display = 'block';
+        chatInputEs.style.display = 'none';
+      }
+    }
+
+    // Initialize chat input visibility
+    updateChatInputVisibility();
+    
+    // Update when language changes
+    languageToggle.addEventListener('click', updateChatInputVisibility);
 
     // Back to top button
     const backToTop = document.querySelector('.back-to-top');
@@ -1536,7 +1843,11 @@
     
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you for your message! We will get back to you soon.');
+      const isSpanish = document.body.classList.contains('spanish');
+      alert(isSpanish ? 
+        '¡Gracias por su mensaje! Nos pondremos en contacto con usted pronto.' : 
+        'Thank you for your message! We will get back to you soon.'
+      );
       contactForm.reset();
     });
 
@@ -1545,7 +1856,7 @@
     
     openChatBtn.addEventListener('click', () => {
       chatBox.classList.add('active');
-      chatInput.focus();
+      getCurrentChatInput().focus();
     });
   </script>
 </body>
