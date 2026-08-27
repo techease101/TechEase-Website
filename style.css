@@ -1169,6 +1169,1090 @@ img {
   font-weight: 610;
 }
 
+
+.visual-card {
+  min-height: 390px;
+  padding-bottom: 190px;
+}
+
+.card-visual {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 18px;
+  pointer-events: none;
+}
+
+/* Wi-Fi visual — same illustrated scene logic as Audio & Video */
+.wifi-visual {
+  height: 164px;
+}
+
+.wifi-halo,
+.smart-halo,
+.remote-halo {
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 200px;
+  height: 54px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: .22;
+}
+
+.wifi-halo {
+  background: linear-gradient(135deg, rgba(25,185,221,.30), rgba(100,210,255,.40));
+}
+
+.wifi-arc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid rgba(25,185,221,.18);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+}
+
+.wifi-arc-1 {
+  bottom: 78px;
+  width: 76px;
+  height: 36px;
+}
+
+.wifi-arc-2 {
+  bottom: 76px;
+  width: 116px;
+  height: 58px;
+}
+
+.wifi-arc-3 {
+  bottom: 74px;
+  width: 160px;
+  height: 84px;
+}
+
+.wifi-router-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  width: 132px;
+  height: 48px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(60,60,67,.12);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fefeff, #eef2f7);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.96) inset,
+    0 14px 28px rgba(0,0,0,.08);
+}
+
+.wifi-router-topline {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 8px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(25,185,221,0), rgba(100,210,255,.65), rgba(25,185,221,0));
+}
+
+.wifi-router-leds {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.wifi-router-leds span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #19b9dd, #64d2ff);
+  box-shadow: 0 0 0 5px rgba(100,210,255,.08);
+}
+
+.wifi-switch-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 168px;
+  height: 20px;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #434448, #242528);
+  box-shadow: 0 9px 16px rgba(0,0,0,.14);
+}
+
+.wifi-switch-ports {
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  display: flex;
+  gap: 5px;
+  transform: translateX(-50%);
+}
+
+.wifi-switch-ports span {
+  width: 14px;
+  height: 7px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #6d6f74, #2a2b2e);
+  box-shadow: 0 1px 0 rgba(255,255,255,.06) inset;
+}
+
+.wifi-satellite-scene {
+  position: absolute;
+  bottom: 10px;
+  width: 38px;
+  height: 62px;
+  border: 1px solid rgba(60,60,67,.10);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fefeff, #eef2f7);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.96) inset,
+    0 10px 18px rgba(0,0,0,.08);
+}
+
+.wifi-satellite-scene::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  width: 16px;
+  height: 16px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(255,255,255,.42), transparent 24%),
+    linear-gradient(145deg, #19b9dd, #64d2ff);
+  box-shadow: 0 0 0 4px rgba(100,210,255,.08);
+}
+
+.wifi-satellite-scene::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 11px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(25,185,221,.20);
+}
+
+.wifi-satellite-left { left: 6px; }
+.wifi-satellite-right { right: 6px; }
+
+/* Smart Home visual — product lineup like laptop/TV cards */
+.smart-visual {
+  height: 168px;
+}
+
+.smart-halo {
+  background: linear-gradient(135deg, rgba(43,191,86,.22), rgba(100,210,255,.24));
+}
+
+.smart-display-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 170px;
+  transform: translateX(-50%);
+}
+
+.smart-display-screen {
+  position: relative;
+  width: 144px;
+  height: 88px;
+  margin: 0 auto;
+  padding: 12px;
+  border: 6px solid #47494c;
+  border-radius: 16px 16px 10px 10px;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(100,210,255,.78), transparent 42%),
+    linear-gradient(145deg, #f6fff8, #d9f4e5 55%, #e4efff);
+  box-shadow: 0 14px 24px rgba(0,0,0,.10);
+}
+
+.smart-cloud {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 24px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.80);
+}
+
+.smart-cloud::before,
+.smart-cloud::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.80);
+}
+
+.smart-cloud::before {
+  left: -5px;
+  width: 12px;
+  height: 12px;
+}
+
+.smart-cloud::after {
+  right: -4px;
+  width: 10px;
+  height: 10px;
+}
+
+.smart-temp {
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.smart-day {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: .59rem;
+}
+
+.smart-line {
+  height: 5px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+}
+
+.smart-line.short {
+  width: 58%;
+}
+
+.smart-display-base {
+  width: 154px;
+  height: 14px;
+  margin: 2px auto 0;
+  border-radius: 0 0 60% 60%;
+  background: linear-gradient(#bfc0c4, #ececef);
+  box-shadow: 0 8px 14px rgba(0,0,0,.08);
+}
+
+.smart-camera-scene {
+  position: absolute;
+  left: 8px;
+  bottom: 16px;
+  width: 52px;
+  height: 72px;
+}
+
+.smart-camera-head {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fcfdff, #eef3f8);
+  border: 1px solid rgba(60,60,67,.10);
+  box-shadow: 0 10px 18px rgba(0,0,0,.08);
+}
+
+.smart-camera-lens {
+  position: relative;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  margin: -31px auto 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(255,255,255,.42), transparent 22%),
+    linear-gradient(145deg, #8fcfff, #5e5ce6);
+  box-shadow: 0 0 0 5px rgba(94,92,230,.08);
+}
+
+.smart-camera-base {
+  width: 18px;
+  height: 18px;
+  margin: 18px auto 0;
+  border-radius: 8px 8px 10px 10px;
+  background: linear-gradient(180deg, #d8dce1, #f7f9fb);
+  box-shadow: 0 5px 10px rgba(0,0,0,.06);
+}
+
+.smart-speaker-scene {
+  position: absolute;
+  right: 8px;
+  bottom: 14px;
+  width: 52px;
+  height: 70px;
+  padding-top: 14px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #4a4b4f, #252629);
+  box-shadow: 0 12px 22px rgba(0,0,0,.12);
+}
+
+.smart-speaker-scene span {
+  display: block;
+  width: 22px;
+  height: 4px;
+  margin: 0 auto 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.20);
+}
+
+/* Remote visual — phone + 24/7 badge + van, same product scene approach */
+.remote-visual {
+  height: 174px;
+}
+
+.remote-halo {
+  background: linear-gradient(135deg, rgba(255,55,95,.20), rgba(191,90,242,.18));
+}
+
+.remote-phone-scene {
+  position: absolute;
+  left: 14px;
+  bottom: 8px;
+  width: 82px;
+  height: 134px;
+  padding: 7px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #414246, #232427);
+  box-shadow: 0 16px 28px rgba(0,0,0,.14);
+}
+
+.remote-phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 17px;
+  background:
+    radial-gradient(circle at 72% 25%, rgba(255,255,255,.24), transparent 22%),
+    linear-gradient(145deg, #ffe6ee, #e9e3ff 56%, #dff5ff);
+}
+
+.remote-phone-notch {
+  width: 34px;
+  height: 6px;
+  margin: 8px auto 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.34);
+}
+
+.remote-phone-avatar {
+  width: 30px;
+  height: 30px;
+  margin: 14px auto 10px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 33%, rgba(255,255,255,.45), transparent 22%),
+    linear-gradient(145deg, #ff6d8b, #bf5af2);
+  box-shadow: 0 8px 14px rgba(191,90,242,.16);
+}
+
+.remote-phone-lines {
+  padding: 0 11px;
+}
+
+.remote-phone-lines span {
+  display: block;
+  height: 5px;
+  margin-bottom: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+}
+
+.remote-phone-lines span:nth-child(2) { width: 76%; }
+.remote-phone-lines span:nth-child(3) { width: 58%; margin-bottom: 0; }
+
+.remote-badge-scene {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(145deg, #ff5478, #ff8aa3);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.24) inset,
+    0 14px 24px rgba(255,55,95,.20);
+}
+
+.remote-badge-scene strong,
+.remote-badge-scene small {
+  display: block;
+  line-height: 1;
+}
+
+.remote-badge-scene strong { font-size: .90rem; }
+.remote-badge-scene small {
+  margin-top: 4px;
+  font-size: .55rem;
+  opacity: .95;
+}
+
+.remote-van-scene {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 126px;
+  height: 68px;
+}
+
+.remote-van-body {
+  position: absolute;
+  left: 26px;
+  bottom: 12px;
+  width: 82px;
+  height: 34px;
+  border-radius: 12px 14px 10px 10px;
+  background: linear-gradient(145deg, #ffffff, #edf2f7);
+  border: 1px solid rgba(60,60,67,.10);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.94) inset,
+    0 10px 18px rgba(0,0,0,.08);
+}
+
+.remote-van-cab {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 38px;
+  height: 30px;
+  border-radius: 12px 10px 8px 8px;
+  background: linear-gradient(145deg, #ffffff, #edf2f7);
+  border: 1px solid rgba(60,60,67,.10);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.94) inset,
+    0 10px 18px rgba(0,0,0,.08);
+}
+
+.remote-van-cab::before {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  width: 14px;
+  height: 11px;
+  border-radius: 5px;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(100,210,255,.62), transparent 40%),
+    linear-gradient(145deg, #eaf6ff, #dbe6ff 58%, #efe1ff);
+}
+
+.remote-van-stripe {
+  position: absolute;
+  left: 32px;
+  right: 22px;
+  bottom: 26px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0a84ff, #64d2ff, #bf5af2, #ff375f);
+}
+
+.remote-van-wheel {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #404145, #1d1d1f);
+  box-shadow: 0 6px 10px rgba(0,0,0,.14);
+}
+
+.remote-van-wheel-left { left: 20px; }
+.remote-van-wheel-right { right: 18px; }
+
+
+/* Service visual scenes v6 — product illustration style */
+.bento-wifi {
+  background:
+    radial-gradient(circle at 52% 92%, rgba(100,210,255,.16), transparent 15rem),
+    rgba(255,255,255,.84);
+}
+
+.bento-smart {
+  background:
+    radial-gradient(circle at 52% 92%, rgba(48,209,88,.13), transparent 15rem),
+    radial-gradient(circle at 78% 78%, rgba(100,210,255,.08), transparent 11rem),
+    rgba(255,255,255,.84);
+}
+
+.bento-remote {
+  background:
+    radial-gradient(circle at 52% 92%, rgba(255,55,95,.12), transparent 15rem),
+    radial-gradient(circle at 78% 74%, rgba(191,90,242,.10), transparent 12rem),
+    rgba(255,255,255,.84);
+}
+
+.visual-card {
+  min-height: 424px;
+  padding-bottom: 216px;
+}
+
+.card-visual {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  height: 190px;
+  pointer-events: none;
+}
+
+/* Wi‑Fi = large router + ethernet switch */
+.wifi-visual {
+  height: 190px;
+}
+
+.wf-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wf-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 230px;
+  height: 66px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(25,185,221,.34), rgba(100,210,255,.42));
+  filter: blur(22px);
+  opacity: .26;
+}
+
+.wf-arc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid rgba(25,185,221,.16);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+}
+
+.wf-arc-1 {
+  bottom: 98px;
+  width: 86px;
+  height: 40px;
+}
+
+.wf-arc-2 {
+  bottom: 96px;
+  width: 132px;
+  height: 66px;
+}
+
+.wf-arc-3 {
+  bottom: 94px;
+  width: 184px;
+  height: 98px;
+}
+
+.wf-router {
+  position: absolute;
+  left: 50%;
+  bottom: 44px;
+  width: 184px;
+  height: 68px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(60,60,67,.13);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(238,243,248,.98));
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.98) inset,
+    0 18px 34px rgba(0,0,0,.10);
+}
+
+.wf-router::before,
+.wf-router::after {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  width: 7px;
+  height: 68px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #5b5c60, #2b2c2f);
+  box-shadow: 0 8px 14px rgba(0,0,0,.12);
+  transform-origin: bottom center;
+}
+
+.wf-router::before {
+  left: 26px;
+  transform: rotate(-10deg);
+}
+
+.wf-router::after {
+  right: 26px;
+  transform: rotate(10deg);
+}
+
+.wf-router-top {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 11px;
+  height: 9px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.92), transparent 22%),
+    linear-gradient(90deg, rgba(10,132,255,.18), rgba(100,210,255,.92), rgba(191,90,242,.68), rgba(10,132,255,.18));
+  box-shadow: 0 0 18px rgba(100,210,255,.18);
+}
+
+.wf-router-leds {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  display: flex;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.wf-router-leds span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #19b9dd, #64d2ff);
+  box-shadow: 0 0 0 5px rgba(100,210,255,.08);
+}
+
+.wf-switch {
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 212px;
+  height: 28px;
+  transform: translateX(-50%);
+  border-radius: 9px;
+  background: linear-gradient(180deg, #46474b, #202124);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.07) inset,
+    0 12px 22px rgba(0,0,0,.16);
+}
+
+.wf-switch::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #30d158;
+  box-shadow: 0 0 0 4px rgba(48,209,88,.10);
+}
+
+.wf-switch-ports {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  display: flex;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.wf-switch-ports span {
+  width: 19px;
+  height: 11px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #71737a, #27282b);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.05) inset,
+    0 2px 3px rgba(0,0,0,.12) inset;
+}
+
+/* Smart Home = smart display + camera + speaker */
+.smart-visual {
+  height: 190px;
+}
+
+.sh-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sh-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  width: 238px;
+  height: 66px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(48,209,88,.28), rgba(100,210,255,.25), rgba(94,92,230,.18));
+  filter: blur(22px);
+  opacity: .26;
+}
+
+.sh-display {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  width: 192px;
+  transform: translateX(-50%);
+}
+
+.sh-screen {
+  position: relative;
+  width: 168px;
+  height: 106px;
+  margin: 0 auto;
+  padding: 14px;
+  overflow: hidden;
+  border: 7px solid #424347;
+  border-radius: 20px 20px 12px 12px;
+  background:
+    radial-gradient(circle at 75% 24%, rgba(100,210,255,.92), transparent 32%),
+    radial-gradient(circle at 28% 74%, rgba(191,90,242,.22), transparent 42%),
+    linear-gradient(145deg, #f2fff7, #d7f6e3 48%, #dce9ff 100%);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.12) inset,
+    0 16px 28px rgba(0,0,0,.12);
+}
+
+.sh-cloud {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 28px;
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+}
+
+.sh-cloud::before,
+.sh-cloud::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.82);
+}
+
+.sh-cloud::before {
+  left: -6px;
+  width: 14px;
+  height: 14px;
+}
+
+.sh-cloud::after {
+  right: -5px;
+  width: 12px;
+  height: 12px;
+}
+
+.sh-temp {
+  font-size: 1.28rem;
+  font-weight: 720;
+  line-height: 1;
+}
+
+.sh-day {
+  margin-top: 6px;
+  color: rgba(29,29,31,.66);
+  font-size: .64rem;
+  font-weight: 560;
+}
+
+.sh-line {
+  height: 6px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+}
+
+.sh-line.short {
+  width: 58%;
+}
+
+.sh-base {
+  width: 178px;
+  height: 18px;
+  margin: 3px auto 0;
+  border-radius: 0 0 60% 60%;
+  background: linear-gradient(#b9babf, #f0f0f2);
+  box-shadow: 0 9px 15px rgba(0,0,0,.09);
+}
+
+.sh-camera {
+  position: absolute;
+  left: 2px;
+  bottom: 20px;
+  width: 64px;
+  height: 86px;
+}
+
+.sh-camera-head {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  border-radius: 19px;
+  background: linear-gradient(180deg, #fdfdff, #edf2f7);
+  border: 1px solid rgba(60,60,67,.10);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.95) inset,
+    0 12px 22px rgba(0,0,0,.09);
+}
+
+.sh-camera-lens {
+  position: relative;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  margin: -40px auto 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 32%, rgba(255,255,255,.55), transparent 20%),
+    linear-gradient(145deg, #7ecbff, #5e5ce6 68%, #bf5af2);
+  box-shadow:
+    0 0 0 6px rgba(94,92,230,.07),
+    0 8px 14px rgba(94,92,230,.13);
+}
+
+.sh-camera-base {
+  width: 20px;
+  height: 20px;
+  margin: 25px auto 0;
+  border-radius: 8px 8px 10px 10px;
+  background: linear-gradient(180deg, #d4d8de, #f8f9fb);
+  box-shadow: 0 5px 10px rgba(0,0,0,.07);
+}
+
+.sh-speaker {
+  position: absolute;
+  right: 1px;
+  bottom: 18px;
+  width: 62px;
+  height: 86px;
+  padding-top: 18px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,.06), transparent 18%),
+    linear-gradient(180deg, #4c4d51, #242529);
+  box-shadow: 0 14px 24px rgba(0,0,0,.14);
+}
+
+.sh-speaker span {
+  display: block;
+  width: 28px;
+  height: 5px;
+  margin: 0 auto 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.17);
+}
+
+/* Remote Support = phone + service van + 24/7 */
+.remote-visual {
+  height: 192px;
+}
+
+.rs-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rs-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 240px;
+  height: 68px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,55,95,.26), rgba(191,90,242,.26), rgba(100,210,255,.12));
+  filter: blur(22px);
+  opacity: .25;
+}
+
+.rs-phone {
+  position: absolute;
+  left: 7px;
+  bottom: 8px;
+  width: 96px;
+  height: 158px;
+  padding: 8px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #414246, #212225);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.08) inset,
+    0 18px 30px rgba(0,0,0,.16);
+}
+
+.rs-phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 72% 24%, rgba(255,255,255,.28), transparent 22%),
+    radial-gradient(circle at 28% 76%, rgba(100,210,255,.16), transparent 42%),
+    linear-gradient(145deg, #ffe8ef, #e9e2ff 54%, #dff6ff);
+}
+
+.rs-notch {
+  width: 38px;
+  height: 7px;
+  margin: 9px auto 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.38);
+}
+
+.rs-avatar {
+  width: 36px;
+  height: 36px;
+  margin: 17px auto 12px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 34%, rgba(255,255,255,.48), transparent 22%),
+    linear-gradient(145deg, #ff6d8b, #bf5af2);
+  box-shadow: 0 9px 16px rgba(191,90,242,.18);
+}
+
+.rs-lines {
+  padding: 0 13px;
+}
+
+.rs-lines span {
+  display: block;
+  height: 6px;
+  margin-bottom: 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+}
+
+.rs-lines span:nth-child(2) { width: 77%; }
+.rs-lines span:nth-child(3) { width: 58%; margin-bottom: 0; }
+
+.rs-badge {
+  position: absolute;
+  right: 14px;
+  top: 2px;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 22px;
+  color: white;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.30), transparent 22%),
+    linear-gradient(145deg, #ff4d73, #ff7b98);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.25) inset,
+    0 15px 27px rgba(255,55,95,.21);
+}
+
+.rs-badge strong,
+.rs-badge small {
+  display: block;
+  line-height: 1;
+}
+
+.rs-badge strong {
+  font-size: 1rem;
+}
+
+.rs-badge small {
+  margin-top: 5px;
+  font-size: .57rem;
+  opacity: .96;
+}
+
+.rs-van {
+  position: absolute;
+  right: -3px;
+  bottom: 11px;
+  width: 148px;
+  height: 82px;
+}
+
+.rs-van-body {
+  position: absolute;
+  left: 30px;
+  bottom: 16px;
+  width: 96px;
+  height: 42px;
+  border-radius: 14px 16px 11px 11px;
+  background: linear-gradient(145deg, #ffffff, #edf2f7);
+  border: 1px solid rgba(60,60,67,.10);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.96) inset,
+    0 11px 20px rgba(0,0,0,.09);
+}
+
+.rs-van-body::after {
+  content: "TE";
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  color: rgba(29,29,31,.45);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.rs-van-cab {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  width: 44px;
+  height: 36px;
+  border-radius: 14px 11px 9px 9px;
+  background: linear-gradient(145deg, #ffffff, #edf2f7);
+  border: 1px solid rgba(60,60,67,.10);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.96) inset,
+    0 11px 20px rgba(0,0,0,.09);
+}
+
+.rs-van-cab::before {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  width: 17px;
+  height: 14px;
+  border-radius: 5px;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(100,210,255,.68), transparent 38%),
+    linear-gradient(145deg, #eaf6ff, #dbe6ff 58%, #efe1ff);
+}
+
+.rs-van-stripe {
+  position: absolute;
+  left: 36px;
+  right: 24px;
+  bottom: 31px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0a84ff, #64d2ff, #bf5af2, #ff375f);
+}
+
+.rs-wheel {
+  position: absolute;
+  bottom: 0;
+  width: 23px;
+  height: 23px;
+  border: 3px solid #55565b;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #292a2d, #121315);
+  box-shadow: 0 6px 10px rgba(0,0,0,.16);
+}
+
+.rs-wheel-left { left: 24px; }
+.rs-wheel-right { right: 20px; }
+
 /* AV feature */
 .av-feature {
   overflow: hidden;
@@ -2087,6 +3171,45 @@ img {
     min-height: auto;
   }
 
+  .visual-card {
+    min-height: 400px;
+    padding-bottom: 182px;
+  }
+
+  .wifi-visual,
+  .smart-visual,
+  .remote-visual {
+    height: 160px;
+  }
+
+  .wf-router,
+  .wf-switch,
+  .sh-display {
+    transform-origin: center bottom;
+  }
+
+  .wf-router {
+    transform: translateX(-50%) scale(.96);
+  }
+
+  .wf-switch {
+    transform: translateX(-50%) scale(.96);
+  }
+
+  .sh-display {
+    transform: translateX(-50%) scale(.95);
+  }
+
+  .rs-phone {
+    transform: scale(.94);
+    transform-origin: left bottom;
+  }
+
+  .rs-van {
+    transform: scale(.94);
+    transform-origin: right bottom;
+  }
+
   .bento-large {
     padding-bottom: 190px;
   }
@@ -2221,6 +3344,45 @@ img {
 
   .mobile-dock .dock-primary i {
     color: white;
+  }
+}
+
+
+@media (max-width: 720px) {
+  .visual-card {
+    min-height: 398px;
+    padding-bottom: 184px;
+  }
+
+  .wifi-visual,
+  .smart-visual,
+  .remote-visual {
+    height: 160px;
+  }
+
+  .wifi-router-scene {
+    transform: translateX(-50%) scale(.96);
+    transform-origin: center bottom;
+  }
+
+  .wifi-switch-scene {
+    transform: translateX(-50%) scale(.96);
+    transform-origin: center bottom;
+  }
+
+  .smart-display-scene {
+    transform: translateX(-50%) scale(.95);
+    transform-origin: center bottom;
+  }
+
+  .remote-phone-scene {
+    transform: scale(.94);
+    transform-origin: left bottom;
+  }
+
+  .remote-van-scene {
+    transform: scale(.94);
+    transform-origin: right bottom;
   }
 }
 
