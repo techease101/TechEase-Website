@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TechEase Los Angeles, California | Mobile Tech Support, Computer Help & Audio/Video</title>
-  <meta name="description" content="Mobile tech support across Los Angeles, California for homes and businesses. Computer repair, Wi-Fi, TV and audio/video setup, smart home, office IT, remote support, and bilingual English/Spanish service.">
-  <meta name="theme-color" content="#07111f">
-  <meta property="og:title" content="TechEase Los Angeles, California | Mobile Technology Solutions">
-  <meta property="og:description" content="One call for computers, Wi-Fi, TVs, audio/video, smart home and business technology across Los Angeles, California.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TechEase | Mobile Tech Support in Los Angeles, CA</title>
+  <meta name="description" content="TechEase provides professional mobile tech support for homes and businesses in Los Angeles, CA. Computer help, Wi-Fi, audio/video, smart home, business technology and remote support in English and Spanish.">
+  <meta name="theme-color" content="#f5f5f7">
+
+  <meta property="og:title" content="TechEase | Technology Made Simple">
+  <meta property="og:description" content="Professional mobile tech support for homes and businesses in Los Angeles, CA.">
   <meta property="og:type" content="website">
+
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -18,27 +20,22 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "TechEase",
-    "description": "Mobile technology support for homes and businesses in Los Angeles, California, including computer help, Wi-Fi, audio/video, smart home and business IT support.",
+    "description": "Professional mobile technology support for homes and businesses.",
     "telephone": "+1-719-253-2733",
     "email": "gettechease@gmail.com",
     "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Los Angeles, California"
+      "@type": "City",
+      "name": "Los Angeles, CA"
     },
     "availableLanguage": ["English", "Spanish"],
-    "priceRange": "$$",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {"@type":"OfferCatalog","name":"Computer & Device Support"},
-        {"@type":"OfferCatalog","name":"Audio/Video & Home Entertainment"},
-        {"@type":"OfferCatalog","name":"Wi-Fi & Networking"},
-        {"@type":"OfferCatalog","name":"Business IT Support"},
-        {"@type":"OfferCatalog","name":"Smart Home & Streaming"},
-        {"@type":"OfferCatalog","name":"Remote Tech Support"}
-      ]
-    }
+    "serviceType": [
+      "Computer Support",
+      "Wi-Fi and Networking",
+      "Audio and Video Support",
+      "Smart Home Support",
+      "Business IT Support",
+      "Remote Tech Support"
+    ]
   }
   </script>
 </head>
@@ -46,503 +43,573 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span><i class="fa-solid fa-location-dot"></i> <span data-en="Los Angeles, California" data-es="Gran Los Ángeles">Los Angeles, California</span></span>
-      <span><i class="fa-solid fa-car-side"></i> <span data-en="On-site + remote support" data-es="Soporte a domicilio + remoto">On-site + remote support</span></span>
-      <span><i class="fa-solid fa-language"></i> English / Español</span>
-    </div>
-  </div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient ambient-three" aria-hidden="true"></div>
 
-  <header class="site-header" id="site-header">
-    <div class="container nav-wrap">
+  <header class="floating-header">
+    <div class="header-shell">
       <a class="brand" href="#home" aria-label="TechEase home">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="brand-core"></span>
+        <span class="brand-icon" aria-hidden="true">
+          <span class="brand-glyph"></span>
         </span>
-        <span class="brand-copy">
+        <span class="brand-text">
           <strong>TechEase</strong>
-          <small data-en="Los Angeles, California" data-es="Los Ángeles, California">Los Angeles, California</small>
+          <small data-en="Technology Made Simple" data-es="Tecnología Hecha Simple">Technology Made Simple</small>
         </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#services" data-en="Services" data-es="Servicios">Services</a>
-        <a href="#av" data-en="Audio / Video" data-es="Audio / Video">Audio / Video</a>
+        <a href="#av" data-en="Audio & Video" data-es="Audio y Video">Audio & Video</a>
         <a href="#business" data-en="Business" data-es="Empresas">Business</a>
-        <a href="#areas" data-en="Service Area" data-es="Área">Service Area</a>
+        <a href="#about" data-en="About" data-es="Nosotros">About</a>
         <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
       </nav>
 
-      <div class="nav-actions">
-        <button class="lang-toggle" id="languageToggle" type="button" aria-label="Switch website language">
+      <div class="header-actions">
+        <button class="glass-control language-toggle" id="languageToggle" type="button" aria-label="Switch language">
           <i class="fa-solid fa-globe"></i>
           <span id="languageLabel">Español</span>
         </button>
-        <a class="nav-call" href="tel:+17192532733">
+        <a class="glass-control header-call" href="tel:+17192532733">
           <i class="fa-solid fa-phone"></i>
           <span data-en="Call" data-es="Llamar">Call</span>
         </a>
-        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="glass-control menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
       <a href="#services" data-en="Services" data-es="Servicios">Services</a>
-      <a href="#av" data-en="Audio / Video" data-es="Audio / Video">Audio / Video</a>
+      <a href="#av" data-en="Audio & Video" data-es="Audio y Video">Audio & Video</a>
       <a href="#business" data-en="Business" data-es="Empresas">Business</a>
-      <a href="#areas" data-en="Service Area" data-es="Área">Service Area</a>
+      <a href="#about" data-en="About" data-es="Nosotros">About</a>
       <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="home">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-glow glow-one" aria-hidden="true"></div>
-      <div class="hero-glow glow-two" aria-hidden="true"></div>
-
       <div class="container hero-layout">
         <div class="hero-copy">
-          <div class="eyebrow">
-            <i class="fa-solid fa-bolt"></i>
-            <span data-en="MOBILE TECH SUPPORT • LOS ANGELES, CALIFORNIA" data-es="SOPORTE TÉCNICO MÓVIL • LOS ÁNGELES, CALIFORNIA">MOBILE TECH SUPPORT • LOS ANGELES, CALIFORNIA</span><small>LA</small>
+          <div class="hero-pill">
+            <span class="pulse-dot"></span>
+            <span data-en="Mobile & Remote Tech Support" data-es="Soporte Técnico Móvil y Remoto">Mobile & Remote Tech Support</span>
           </div>
 
-          <h1 data-en="One call for the technology in your home or business." data-es="Una llamada para la tecnología de tu hogar o negocio.">
-            One call for the technology in your home or business.
+          <h1>
+            <span data-en="Technology should feel" data-es="La tecnología debería sentirse">Technology should feel</span>
+            <span class="gradient-word" data-en="effortless." data-es="fácil.">effortless.</span>
           </h1>
 
-          <p class="hero-lead" data-en="Computers, Wi-Fi, TVs, sound systems, streaming, smart-home devices, office technology and more — diagnosed, set up and simplified at your location or remotely." data-es="Computadoras, Wi-Fi, TVs, sistemas de sonido, streaming, dispositivos inteligentes, tecnología de oficina y más — diagnóstico, configuración y soporte en tu ubicación o de forma remota.">
-            Computers, Wi-Fi, TVs, sound systems, streaming, smart-home devices, office technology and more — diagnosed, set up and simplified at your location or remotely.
+          <p class="hero-lead" data-en="Professional help for computers, Wi-Fi, audio/video, smart devices and business technology. We come to you in Los Angeles, CA or connect remotely when an on-site visit isn't needed." data-es="Ayuda profesional para computadoras, Wi-Fi, audio/video, dispositivos inteligentes y tecnología empresarial. Vamos a tu ubicación en Los Angeles, CA o nos conectamos de forma remota cuando no se necesita una visita.">
+            Professional help for computers, Wi-Fi, audio/video, smart devices and business technology. We come to you in Los Angeles, CA or connect remotely when an on-site visit isn't needed.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">
-              <i class="fa-solid fa-calendar-check"></i>
+            <a class="primary-action" href="#contact">
               <span data-en="Request Service" data-es="Solicitar Servicio">Request Service</span>
+              <span class="action-icon"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
-            <a class="btn btn-secondary" href="sms:+17192532733">
-              <i class="fa-solid fa-message"></i>
-              <span data-en="Text TechEase" data-es="Enviar Texto">Text TechEase</span>
+            <a class="secondary-action" href="sms:+17192532733">
+              <i class="fa-regular fa-message"></i>
+              <span data-en="Text Us" data-es="Enviar Texto">Text Us</span>
             </a>
           </div>
 
-          <div class="trust-strip">
-            <span><i class="fa-solid fa-house-laptop"></i> <span data-en="Home + Business" data-es="Hogar + Empresas">Home + Business</span></span>
-            <span><i class="fa-solid fa-comments"></i> <span data-en="English + Spanish" data-es="Inglés + Español">English + Spanish</span></span>
-            <span><i class="fa-solid fa-clock"></i> <span data-en="Same-day requests" data-es="Solicitudes el mismo día">Same-day requests</span></span>
+          <div class="hero-trust">
+            <div>
+              <i class="fa-solid fa-house"></i>
+              <span data-en="Home" data-es="Hogar">Home</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-building"></i>
+              <span data-en="Business" data-es="Empresas">Business</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-language"></i>
+              <span>English / Español</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-console" aria-label="TechEase service categories">
-          <div class="console-top">
+        <div class="hero-visual" aria-label="Technology services overview">
+          <div class="liquid-stage">
+            <div class="color-field field-blue"></div>
+            <div class="color-field field-purple"></div>
+            <div class="color-field field-pink"></div>
+
+            <div class="device-window main-window">
+              <div class="window-bar">
+                <div class="traffic-lights" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="window-title">TechEase</div>
+                <div class="window-status">
+                  <span class="status-dot"></span>
+                  <span data-en="Ready" data-es="Listo">Ready</span>
+                </div>
+              </div>
+
+              <div class="window-content">
+                <div class="window-intro">
+                  <span class="mini-label" data-en="HOW CAN WE HELP?" data-es="¿CÓMO PODEMOS AYUDAR?">HOW CAN WE HELP?</span>
+                  <h2 data-en="One place for your everyday technology." data-es="Un solo lugar para tu tecnología diaria.">One place for your everyday technology.</h2>
+                </div>
+
+                <div class="service-orbit">
+                  <div class="orbit-card card-computer">
+                    <span class="orbit-icon icon-blue"><i class="fa-solid fa-laptop"></i></span>
+                    <div>
+                      <strong data-en="Computers" data-es="Computadoras">Computers</strong>
+                      <small>PC · Mac · Printers</small>
+                    </div>
+                  </div>
+
+                  <div class="orbit-card card-av">
+                    <span class="orbit-icon icon-purple"><i class="fa-solid fa-tv"></i></span>
+                    <div>
+                      <strong data-en="Audio & Video" data-es="Audio y Video">Audio & Video</strong>
+                      <small>TV · Sound · Streaming</small>
+                    </div>
+                  </div>
+
+                  <div class="orbit-card card-network">
+                    <span class="orbit-icon icon-cyan"><i class="fa-solid fa-wifi"></i></span>
+                    <div>
+                      <strong data-en="Wi-Fi" data-es="Wi-Fi">Wi-Fi</strong>
+                      <small>Mesh · Routers · Network</small>
+                    </div>
+                  </div>
+
+                  <div class="orbit-card card-business">
+                    <span class="orbit-icon icon-orange"><i class="fa-solid fa-briefcase"></i></span>
+                    <div>
+                      <strong data-en="Business" data-es="Empresas">Business</strong>
+                      <small>Office · Meetings · Support</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-one">
+              <span class="chip-icon icon-green"><i class="fa-solid fa-circle-check"></i></span>
+              <div>
+                <small data-en="Support" data-es="Soporte">Support</small>
+                <strong data-en="On-site or Remote" data-es="A domicilio o Remoto">On-site or Remote</strong>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-two">
+              <span class="chip-icon icon-pink"><i class="fa-solid fa-volume-high"></i></span>
+              <div>
+                <small data-en="Specialty" data-es="Especialidad">Specialty</small>
+                <strong data-en="Audio / Video" data-es="Audio / Video">Audio / Video</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <span data-en="Explore services" data-es="Ver servicios">Explore services</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <div class="container intro-strip-inner">
+        <p data-en="No confusing handoffs. No need to unplug everything and carry it to a shop." data-es="Sin transferencias confusas. No tienes que desconectar todo y llevarlo a una tienda.">
+          No confusing handoffs. No need to unplug everything and carry it to a shop.
+        </p>
+        <strong data-en="TechEase brings support to you." data-es="TechEase lleva el soporte hasta ti.">TechEase brings support to you.</strong>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker" data-en="SERVICES" data-es="SERVICIOS">SERVICES</span>
+          <h2 data-en="One expert for the technology around you." data-es="Un experto para la tecnología que te rodea.">One expert for the technology around you.</h2>
+          <p data-en="From a single device problem to a connected home or small office, we troubleshoot the whole setup instead of treating every device as a separate problem." data-es="Desde un problema con un solo dispositivo hasta una casa conectada o una pequeña oficina, revisamos el sistema completo en lugar de tratar cada dispositivo como un problema separado.">
+            From a single device problem to a connected home or small office, we troubleshoot the whole setup instead of treating every device as a separate problem.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-large">
+            <div class="card-topline">
+              <span class="service-symbol symbol-blue"><i class="fa-solid fa-laptop"></i></span>
+              <span class="card-index">01</span>
+            </div>
+            <div class="card-copy">
+              <h3 data-en="Computer & Device Support" data-es="Soporte de Computadoras y Dispositivos">Computer & Device Support</h3>
+              <p data-en="PC and Mac troubleshooting, slow computers, printers, software, updates, new-device setup, data transfers and everyday problems that get in the way." data-es="Soporte para PC y Mac, computadoras lentas, impresoras, software, actualizaciones, configuración de dispositivos, transferencia de datos y problemas cotidianos.">
+                PC and Mac troubleshooting, slow computers, printers, software, updates, new-device setup, data transfers and everyday problems that get in the way.
+              </p>
+              <div class="tag-row"><span>Windows</span><span>Mac</span><span>Printers</span><span>Setup</span></div>
+            </div>
+            <div class="card-visual laptop-visual" aria-hidden="true">
+              <div class="mini-screen">
+                <div class="mini-toolbar"></div>
+                <div class="mini-lines"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mini-base"></div>
+            </div>
+          </article>
+
+          <article class="bento-card bento-tall bento-av" id="av">
+            <div class="card-topline">
+              <span class="service-symbol symbol-purple"><i class="fa-solid fa-wave-square"></i></span>
+              <span class="card-index">02</span>
+            </div>
+            <div class="card-copy">
+              <span class="specialty-badge" data-en="SPECIALTY" data-es="ESPECIALIDAD">SPECIALTY</span>
+              <h3 data-en="Audio & Video" data-es="Audio y Video">Audio & Video</h3>
+              <p data-en="TVs, soundbars, receivers, speakers, projectors, streaming, gaming systems, HDMI/eARC problems and home entertainment setup." data-es="TVs, barras de sonido, receptores, bocinas, proyectores, streaming, videojuegos, problemas HDMI/eARC y configuración de entretenimiento en casa.">
+                TVs, soundbars, receivers, speakers, projectors, streaming, gaming systems, HDMI/eARC problems and home entertainment setup.
+              </p>
+            </div>
+
+            <div class="av-stack" aria-hidden="true">
+              <div class="av-screen">
+                <div class="av-gradient"></div>
+                <span class="av-play"><i class="fa-solid fa-play"></i></span>
+              </div>
+              <div class="soundbar"></div>
+              <div class="speaker-row">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="card-topline">
+              <span class="service-symbol symbol-cyan"><i class="fa-solid fa-wifi"></i></span>
+              <span class="card-index">03</span>
+            </div>
+            <div class="card-copy">
+              <h3 data-en="Wi-Fi & Networking" data-es="Wi-Fi y Redes">Wi-Fi & Networking</h3>
+              <p data-en="Slow internet, dead zones, mesh Wi-Fi, routers, connectivity and reliable network setup for home or office." data-es="Internet lento, zonas sin señal, Wi-Fi mesh, routers, conectividad y redes confiables para casa u oficina.">
+                Slow internet, dead zones, mesh Wi-Fi, routers, connectivity and reliable network setup for home or office.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="card-topline">
+              <span class="service-symbol symbol-green"><i class="fa-solid fa-house-signal"></i></span>
+              <span class="card-index">04</span>
+            </div>
+            <div class="card-copy">
+              <h3 data-en="Smart Home & Streaming" data-es="Casa Inteligente y Streaming">Smart Home & Streaming</h3>
+              <p data-en="Smart TVs, Apple TV, Roku, Fire TV, cameras, doorbells, speakers, voice assistants and connected-device troubleshooting." data-es="Smart TVs, Apple TV, Roku, Fire TV, cámaras, timbres, bocinas, asistentes de voz y solución de dispositivos conectados.">
+                Smart TVs, Apple TV, Roku, Fire TV, cameras, doorbells, speakers, voice assistants and connected-device troubleshooting.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card bento-wide" id="business">
+            <div class="business-card-copy">
+              <div class="card-topline">
+                <span class="service-symbol symbol-orange"><i class="fa-solid fa-building"></i></span>
+                <span class="card-index">05</span>
+              </div>
+              <div class="card-copy">
+                <h3 data-en="Small Business Technology" data-es="Tecnología para Pequeñas Empresas">Small Business Technology</h3>
+                <p data-en="Practical support for offices, studios, retail and professional teams that need dependable technology without maintaining a full internal IT department." data-es="Soporte práctico para oficinas, estudios, comercios y equipos profesionales que necesitan tecnología confiable sin mantener un departamento de IT interno.">
+                  Practical support for offices, studios, retail and professional teams that need dependable technology without maintaining a full internal IT department.
+                </p>
+              </div>
+            </div>
+            <div class="business-mini-grid">
+              <div><i class="fa-solid fa-desktop"></i><span data-en="Workstations" data-es="Equipos">Workstations</span></div>
+              <div><i class="fa-solid fa-print"></i><span data-en="Printers" data-es="Impresoras">Printers</span></div>
+              <div><i class="fa-solid fa-video"></i><span data-en="Meeting Rooms" data-es="Salas de Reunión">Meeting Rooms</span></div>
+              <div><i class="fa-solid fa-network-wired"></i><span data-en="Office Network" data-es="Red de Oficina">Office Network</span></div>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="card-topline">
+              <span class="service-symbol symbol-pink"><i class="fa-solid fa-headset"></i></span>
+              <span class="card-index">06</span>
+            </div>
+            <div class="card-copy">
+              <h3 data-en="Remote Support" data-es="Soporte Remoto">Remote Support</h3>
+              <p data-en="Fast help for software, email, apps, settings and other issues that don't require hands-on access to the equipment." data-es="Ayuda rápida para software, correo, apps, configuración y otros problemas que no requieren acceso físico al equipo.">
+                Fast help for software, email, apps, settings and other issues that don't require hands-on access to the equipment.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="av-feature section">
+      <div class="container av-feature-layout">
+        <div class="av-feature-copy">
+          <span class="section-kicker" data-en="AUDIO / VIDEO" data-es="AUDIO / VIDEO">AUDIO / VIDEO</span>
+          <h2 data-en="The picture, sound and controls should work as one system." data-es="La imagen, el sonido y los controles deben funcionar como un solo sistema.">The picture, sound and controls should work as one system.</h2>
+          <p data-en="We look beyond the individual device. Your network, TV, streaming source, receiver, speakers, cables and controls all affect the experience." data-es="Miramos más allá del dispositivo individual. Tu red, TV, fuente de streaming, receptor, bocinas, cables y controles afectan toda la experiencia.">
+            We look beyond the individual device. Your network, TV, streaming source, receiver, speakers, cables and controls all affect the experience.
+          </p>
+
+          <div class="feature-list">
+            <div><span class="check"><i class="fa-solid fa-check"></i></span><span data-en="TV, projector and streaming setup" data-es="Configuración de TV, proyector y streaming">TV, projector and streaming setup</span></div>
+            <div><span class="check"><i class="fa-solid fa-check"></i></span><span data-en="Soundbars, receivers and speakers" data-es="Barras de sonido, receptores y bocinas">Soundbars, receivers and speakers</span></div>
+            <div><span class="check"><i class="fa-solid fa-check"></i></span><span data-en="HDMI, ARC/eARC, CEC and no-signal issues" data-es="Problemas de HDMI, ARC/eARC, CEC y falta de señal">HDMI, ARC/eARC, CEC and no-signal issues</span></div>
+            <div><span class="check"><i class="fa-solid fa-check"></i></span><span data-en="Gaming consoles and media players" data-es="Consolas y reproductores multimedia">Gaming consoles and media players</span></div>
+            <div><span class="check"><i class="fa-solid fa-check"></i></span><span data-en="Conference-room displays, webcams and audio" data-es="Pantallas, cámaras y audio para salas de reunión">Conference-room displays, webcams and audio</span></div>
+          </div>
+        </div>
+
+        <div class="signal-window">
+          <div class="signal-window-bar">
+            <span data-en="SYSTEM VIEW" data-es="VISTA DEL SISTEMA">SYSTEM VIEW</span>
+            <div class="signal-dots"><span></span><span></span><span></span></div>
+          </div>
+
+          <div class="signal-path">
+            <div class="signal-node node-source">
+              <span><i class="fa-solid fa-play"></i></span>
+              <div><small data-en="Source" data-es="Fuente">Source</small><strong>Apple TV · Console · Cable</strong></div>
+            </div>
+            <div class="path-line"></div>
+            <div class="signal-node node-network">
+              <span><i class="fa-solid fa-wifi"></i></span>
+              <div><small data-en="Network" data-es="Red">Network</small><strong>Wi-Fi · Ethernet</strong></div>
+            </div>
+            <div class="path-line"></div>
+            <div class="signal-node node-display">
+              <span><i class="fa-solid fa-tv"></i></span>
+              <div><small data-en="Display" data-es="Pantalla">Display</small><strong>TV · Projector</strong></div>
+            </div>
+            <div class="path-line"></div>
+            <div class="signal-node node-audio">
+              <span><i class="fa-solid fa-volume-high"></i></span>
+              <div><small data-en="Audio" data-es="Audio">Audio</small><strong>Soundbar · Receiver · Speakers</strong></div>
+            </div>
+          </div>
+
+          <div class="signal-footer">
             <span class="status-dot"></span>
-            <span data-en="TECH SUPPORT // LOS ANGELES, CALIFORNIA" data-es="SOPORTE TÉCNICO // LOS ÁNGELES, CALIFORNIA">TECH SUPPORT // LOS ANGELES, CALIFORNIA</span>
-            <span class="console-live" data-en="MOBILE" data-es="MÓVIL">MOBILE</span>
-          </div>
-
-          <div class="console-screen">
-            <div class="console-line">
-              <span class="console-icon"><i class="fa-solid fa-laptop"></i></span>
-              <div>
-                <strong data-en="COMPUTERS" data-es="COMPUTADORAS">COMPUTERS</strong>
-                <small data-en="PC • Mac • printers • upgrades" data-es="PC • Mac • impresoras • mejoras">PC • Mac • printers • upgrades</small>
-              </div>
-            </div>
-            <div class="console-line featured">
-              <span class="console-icon"><i class="fa-solid fa-tv"></i></span>
-              <div>
-                <strong data-en="AUDIO / VIDEO" data-es="AUDIO / VIDEO">AUDIO / VIDEO</strong>
-                <small data-en="TV • soundbars • theater • streaming" data-es="TV • barras de sonido • cine • streaming">TV • soundbars • theater • streaming</small>
-              </div>
-            </div>
-            <div class="console-line">
-              <span class="console-icon"><i class="fa-solid fa-wifi"></i></span>
-              <div>
-                <strong data-en="NETWORKS" data-es="REDES">NETWORKS</strong>
-                <small data-en="Wi-Fi • mesh • routers • devices" data-es="Wi-Fi • mesh • routers • dispositivos">Wi-Fi • mesh • routers • devices</small>
-              </div>
-            </div>
-            <div class="console-line">
-              <span class="console-icon"><i class="fa-solid fa-building"></i></span>
-              <div>
-                <strong data-en="BUSINESS TECH" data-es="TECNOLOGÍA EMPRESARIAL">BUSINESS TECH</strong>
-                <small data-en="Workstations • meeting rooms • support" data-es="Equipos • salas de reunión • soporte">Workstations • meeting rooms • support</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="console-footer">
-            <span><i class="fa-solid fa-circle-check"></i> <span data-en="On-site" data-es="A domicilio">On-site</span></span>
-            <span><i class="fa-solid fa-circle-check"></i> <span data-en="Remote" data-es="Remoto">Remote</span></span>
-            <span><i class="fa-solid fa-circle-check"></i> <span data-en="Bilingual" data-es="Bilingüe">Bilingual</span></span>
+            <span data-en="We troubleshoot the whole signal chain." data-es="Revisamos toda la cadena de señal.">We troubleshoot the whole signal chain.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="quick-issues" aria-label="Common tech issues">
-      <div class="container issue-row">
-        <span data-en="Slow computer?" data-es="¿Computadora lenta?">Slow computer?</span>
-        <span data-en="TV has no sound?" data-es="¿TV sin sonido?">TV has no sound?</span>
-        <span data-en="Wi-Fi keeps dropping?" data-es="¿Wi-Fi se desconecta?">Wi-Fi keeps dropping?</span>
-        <span data-en="New office setup?" data-es="¿Nueva oficina?">New office setup?</span>
-        <span data-en="Streaming not working?" data-es="¿Streaming no funciona?">Streaming not working?</span>
-        <span class="issue-answer" data-en="TechEase handles it." data-es="TechEase lo resuelve.">TechEase handles it.</span>
-      </div>
-    </section>
-
-    <section class="section" id="services">
+    <section class="section experience-section">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading split">
           <div>
-            <span class="kicker" data-en="ONE TECH. MORE SOLUTIONS." data-es="UN TÉCNICO. MÁS SOLUCIONES.">ONE TECH. MORE SOLUTIONS.</span>
-            <h2 data-en="Technology support without the runaround." data-es="Soporte tecnológico sin complicaciones.">Technology support without the runaround.</h2>
+            <span class="section-kicker" data-en="THE TECHEASE EXPERIENCE" data-es="EXPERIENCIA TECHEASE">THE TECHEASE EXPERIENCE</span>
+            <h2 data-en="Professional support without making technology feel complicated." data-es="Soporte profesional sin hacer que la tecnología se sienta complicada.">Professional support without making technology feel complicated.</h2>
           </div>
-          <p data-en="Instead of calling a computer shop, an AV installer, a Wi-Fi company and an office IT provider, start with TechEase. We diagnose the full setup and solve what we can in one visit." data-es="En lugar de llamar a una tienda de computadoras, un instalador de AV, una compañía de Wi-Fi y un proveedor de IT, empieza con TechEase. Revisamos todo el sistema y resolvemos lo posible en una sola visita.">
-            Instead of calling a computer shop, an AV installer, a Wi-Fi company and an office IT provider, start with TechEase. We diagnose the full setup and solve what we can in one visit.
+          <p data-en="The goal isn't just to fix one problem. It's to leave you with a cleaner, easier setup and a clear understanding of what was done." data-es="La meta no es solamente arreglar un problema. Es dejarte con un sistema más limpio, más fácil y con una explicación clara de lo que se hizo.">
+            The goal isn't just to fix one problem. It's to leave you with a cleaner, easier setup and a clear understanding of what was done.
           </p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="service-number">01</div>
-            <div class="service-icon"><i class="fa-solid fa-computer"></i></div>
-            <h3 data-en="Computers & Devices" data-es="Computadoras y Dispositivos">Computers & Devices</h3>
-            <p data-en="PC and Mac troubleshooting, slow systems, software issues, printers, new-device setup, data transfers, updates and upgrade guidance." data-es="Soporte para PC y Mac, equipos lentos, problemas de software, impresoras, configuración de dispositivos, transferencia de datos, actualizaciones y mejoras.">
-              PC and Mac troubleshooting, slow systems, software issues, printers, new-device setup, data transfers, updates and upgrade guidance.
-            </p>
-            <div class="service-tags"><span>Windows</span><span>Mac</span><span>Printers</span><span>Data</span></div>
-          </article>
-
-          <article class="service-card service-card-accent">
-            <div class="service-number">02</div>
-            <div class="service-icon"><i class="fa-solid fa-volume-high"></i></div>
-            <h3 data-en="Audio / Video & Entertainment" data-es="Audio / Video y Entretenimiento">Audio / Video & Entertainment</h3>
-            <p data-en="TV and soundbar setup, receivers, speakers, streaming devices, projectors, gaming systems, HDMI/eARC troubleshooting and home-theater optimization." data-es="Configuración de TV y barras de sonido, receptores, bocinas, dispositivos de streaming, proyectores, videojuegos, solución de HDMI/eARC y optimización de cine en casa.">
-              TV and soundbar setup, receivers, speakers, streaming devices, projectors, gaming systems, HDMI/eARC troubleshooting and home-theater optimization.
-            </p>
-            <div class="service-tags"><span>TV</span><span>Sonos</span><span>HDMI/eARC</span><span>Streaming</span></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">03</div>
-            <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
-            <h3 data-en="Wi-Fi & Networking" data-es="Wi-Fi y Redes">Wi-Fi & Networking</h3>
-            <p data-en="Dead zones, slow internet, mesh Wi-Fi, routers, device connectivity, network cleanup and reliable home-office connectivity." data-es="Zonas sin señal, internet lento, Wi-Fi mesh, routers, conectividad de dispositivos, organización de red y conexión confiable para oficina en casa.">
-              Dead zones, slow internet, mesh Wi-Fi, routers, device connectivity, network cleanup and reliable home-office connectivity.
-            </p>
-            <div class="service-tags"><span>Mesh</span><span>Routers</span><span>Wi-Fi</span><span>Ethernet</span></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">04</div>
-            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <h3 data-en="Business & Office IT" data-es="IT para Empresas y Oficinas">Business & Office IT</h3>
-            <p data-en="Workstations, printers, office Wi-Fi, user setup, conference-room technology, webcams, microphones, displays and practical day-to-day IT support." data-es="Computadoras, impresoras, Wi-Fi de oficina, usuarios, tecnología para salas de reuniones, cámaras, micrófonos, pantallas y soporte IT diario.">
-              Workstations, printers, office Wi-Fi, user setup, conference-room technology, webcams, microphones, displays and practical day-to-day IT support.
-            </p>
-            <div class="service-tags"><span>Office</span><span>Teams</span><span>Zoom</span><span>Displays</span></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">05</div>
-            <div class="service-icon"><i class="fa-solid fa-house-signal"></i></div>
-            <h3 data-en="Smart Home & Streaming" data-es="Casa Inteligente y Streaming">Smart Home & Streaming</h3>
-            <p data-en="Smart TVs, Apple TV, Roku, Fire TV, smart speakers, doorbells, cameras, apps, voice assistants and connected-device troubleshooting." data-es="Smart TVs, Apple TV, Roku, Fire TV, bocinas inteligentes, timbres, cámaras, apps, asistentes de voz y solución de dispositivos conectados.">
-              Smart TVs, Apple TV, Roku, Fire TV, smart speakers, doorbells, cameras, apps, voice assistants and connected-device troubleshooting.
-            </p>
-            <div class="service-tags"><span>Apple TV</span><span>Roku</span><span>Ring</span><span>Alexa</span></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">06</div>
-            <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
-            <h3 data-en="Remote Tech Support" data-es="Soporte Técnico Remoto">Remote Tech Support</h3>
-            <p data-en="Fast help for software, accounts, email, settings, printers, apps and other issues that can be safely solved while you stay in control." data-es="Ayuda rápida con software, cuentas, correo, configuración, impresoras, apps y otros problemas que pueden resolverse de forma segura mientras tú mantienes el control.">
-              Fast help for software, accounts, email, settings, printers, apps and other issues that can be safely solved while you stay in control.
-            </p>
-            <div class="service-tags"><span>Remote</span><span>Email</span><span>Apps</span><span>Setup</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="av-section" id="av">
-      <div class="container av-layout">
-        <div class="av-copy">
-          <span class="kicker kicker-light" data-en="AUDIO / VIDEO SPECIALTY" data-es="ESPECIALIDAD EN AUDIO / VIDEO">AUDIO / VIDEO SPECIALTY</span>
-          <h2 data-en="Make every screen, speaker and source work together." data-es="Haz que cada pantalla, bocina y fuente funcione en conjunto.">Make every screen, speaker and source work together.</h2>
-          <p data-en="A beautiful setup is useless if the audio cuts out, the remote is confusing or the streaming box is on the wrong input. TechEase focuses on the entire signal chain — source, network, display, audio and controls." data-es="Un sistema bonito no sirve si el audio se corta, el control es confuso o el dispositivo de streaming está en la entrada incorrecta. TechEase revisa toda la cadena — fuente, red, pantalla, audio y controles.">
-            A beautiful setup is useless if the audio cuts out, the remote is confusing or the streaming box is on the wrong input. TechEase focuses on the entire signal chain — source, network, display, audio and controls.
-          </p>
-
-          <ul class="check-list">
-            <li><i class="fa-solid fa-check"></i><span data-en="TV, projector and streaming-device setup" data-es="Configuración de TV, proyector y streaming">TV, projector and streaming-device setup</span></li>
-            <li><i class="fa-solid fa-check"></i><span data-en="Soundbars, speakers, receivers and surround sound" data-es="Barras de sonido, bocinas, receptores y sonido envolvente">Soundbars, speakers, receivers and surround sound</span></li>
-            <li><i class="fa-solid fa-check"></i><span data-en="HDMI, ARC/eARC, CEC, lip-sync and no-signal troubleshooting" data-es="Solución de HDMI, ARC/eARC, CEC, sincronización y falta de señal">HDMI, ARC/eARC, CEC, lip-sync and no-signal troubleshooting</span></li>
-            <li><i class="fa-solid fa-check"></i><span data-en="Conference-room displays, webcams, microphones and speakers" data-es="Pantallas, cámaras, micrófonos y bocinas para salas de reunión">Conference-room displays, webcams, microphones and speakers</span></li>
-            <li><i class="fa-solid fa-check"></i><span data-en="Gaming consoles, media players and universal-control cleanup" data-es="Consolas, reproductores multimedia y simplificación de controles">Gaming consoles, media players and universal-control cleanup</span></li>
-          </ul>
-
-          <a class="text-link" href="#contact">
-            <span data-en="Tell us what isn't working" data-es="Cuéntanos qué no funciona">Tell us what isn't working</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="signal-card">
-          <div class="signal-title">
-            <span data-en="YOUR A/V SIGNAL CHAIN" data-es="TU CADENA DE AUDIO / VIDEO">YOUR A/V SIGNAL CHAIN</span>
-            <i class="fa-solid fa-wave-square"></i>
-          </div>
-          <div class="signal-flow">
-            <div class="signal-node"><i class="fa-solid fa-play"></i><span data-en="Source" data-es="Fuente">Source</span></div>
-            <div class="signal-arrow"><i class="fa-solid fa-chevron-down"></i></div>
-            <div class="signal-node"><i class="fa-solid fa-wifi"></i><span data-en="Network" data-es="Red">Network</span></div>
-            <div class="signal-arrow"><i class="fa-solid fa-chevron-down"></i></div>
-            <div class="signal-node"><i class="fa-solid fa-tv"></i><span data-en="Display" data-es="Pantalla">Display</span></div>
-            <div class="signal-arrow"><i class="fa-solid fa-chevron-down"></i></div>
-            <div class="signal-node"><i class="fa-solid fa-volume-high"></i><span data-en="Audio" data-es="Audio">Audio</span></div>
-            <div class="signal-arrow"><i class="fa-solid fa-chevron-down"></i></div>
-            <div class="signal-node signal-node-hot"><i class="fa-solid fa-sliders"></i><span data-en="Controls" data-es="Controles">Controls</span></div>
-          </div>
-          <p data-en="We troubleshoot the system, not just one box." data-es="Revisamos el sistema completo, no solo un aparato.">We troubleshoot the system, not just one box.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="business-section section" id="business">
-      <div class="container">
-        <div class="business-panel">
-          <div class="business-copy">
-            <span class="kicker" data-en="FOR SMALL BUSINESS" data-es="PARA PEQUEÑAS EMPRESAS">FOR SMALL BUSINESS</span>
-            <h2 data-en="Practical IT support without a full-time IT department." data-es="Soporte IT práctico sin contratar un departamento completo.">Practical IT support without a full-time IT department.</h2>
-            <p data-en="Ideal for small offices, retail, professional services, studios, home-based businesses and teams that need a reliable person to call when technology gets in the way." data-es="Ideal para oficinas pequeñas, comercios, servicios profesionales, estudios, negocios desde casa y equipos que necesitan una persona confiable cuando la tecnología se interpone.">
-              Ideal for small offices, retail, professional services, studios, home-based businesses and teams that need a reliable person to call when technology gets in the way.
-            </p>
-            <div class="business-actions">
-              <a class="btn btn-dark" href="#contact"><i class="fa-solid fa-clipboard-list"></i><span data-en="Request a Business Assessment" data-es="Solicitar Evaluación Empresarial">Request a Business Assessment</span></a>
-            </div>
-          </div>
-
-          <div class="business-list">
-            <div><i class="fa-solid fa-desktop"></i><span data-en="Workstation & employee setup" data-es="Configuración de equipos y empleados">Workstation & employee setup</span></div>
-            <div><i class="fa-solid fa-print"></i><span data-en="Printers, scanners & shared devices" data-es="Impresoras, escáneres y equipos compartidos">Printers, scanners & shared devices</span></div>
-            <div><i class="fa-solid fa-router"></i><span data-en="Office Wi-Fi & network troubleshooting" data-es="Wi-Fi de oficina y solución de red">Office Wi-Fi & network troubleshooting</span></div>
-            <div><i class="fa-solid fa-video"></i><span data-en="Zoom / Teams meeting-room setup" data-es="Salas de reunión Zoom / Teams">Zoom / Teams meeting-room setup</span></div>
-            <div><i class="fa-solid fa-shield-halved"></i><span data-en="Updates, security basics & backup guidance" data-es="Actualizaciones, seguridad básica y respaldo">Updates, security basics & backup guidance</span></div>
-            <div><i class="fa-solid fa-screwdriver-wrench"></i><span data-en="On-call troubleshooting & maintenance" data-es="Soporte y mantenimiento bajo demanda">On-call troubleshooting & maintenance</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section why-section">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="kicker" data-en="WHY TECHEASE" data-es="POR QUÉ TECHEASE">WHY TECHEASE</span>
-            <h2 data-en="Built around convenience, clarity and trust." data-es="Servicio basado en comodidad, claridad y confianza.">Built around convenience, clarity and trust.</h2>
-          </div>
-        </div>
-
-        <div class="why-grid">
+        <div class="experience-grid">
           <article>
-            <i class="fa-solid fa-car"></i>
+            <span class="experience-icon"><i class="fa-solid fa-car-side"></i></span>
             <h3 data-en="We come to you" data-es="Vamos a ti">We come to you</h3>
-            <p data-en="Home, office, studio or small business — no need to disconnect everything and carry it to a shop." data-es="Casa, oficina, estudio o negocio — no tienes que desconectar todo y llevarlo a una tienda.">Home, office, studio or small business — no need to disconnect everything and carry it to a shop.</p>
+            <p data-en="Get help where the technology is actually installed: your home, office, studio or business." data-es="Obtén ayuda donde la tecnología realmente está instalada: tu casa, oficina, estudio o negocio.">Get help where the technology is actually installed: your home, office, studio or business.</p>
           </article>
+
           <article>
-            <i class="fa-solid fa-comments"></i>
-            <h3 data-en="Bilingual support" data-es="Soporte bilingüe">Bilingual support</h3>
-            <p data-en="Clear support in English or Spanish, without drowning you in technical jargon." data-es="Soporte claro en inglés o español, sin llenarte de términos técnicos.">Clear support in English or Spanish, without drowning you in technical jargon.</p>
+            <span class="experience-icon"><i class="fa-solid fa-comments"></i></span>
+            <h3 data-en="Clear communication" data-es="Comunicación clara">Clear communication</h3>
+            <p data-en="Straightforward explanations in English or Spanish, without unnecessary jargon." data-es="Explicaciones claras en inglés o español, sin términos técnicos innecesarios.">Straightforward explanations in English or Spanish, without unnecessary jargon.</p>
           </article>
+
           <article>
-            <i class="fa-solid fa-receipt"></i>
-            <h3 data-en="Clear scope first" data-es="Alcance claro primero">Clear scope first</h3>
-            <p data-en="We review the problem and explain the likely scope before additional work is performed." data-es="Revisamos el problema y explicamos el alcance probable antes de realizar trabajo adicional.">We review the problem and explain the likely scope before additional work is performed.</p>
-          </article>
-          <article>
-            <i class="fa-solid fa-layer-group"></i>
+            <span class="experience-icon"><i class="fa-solid fa-layer-group"></i></span>
             <h3 data-en="Whole-system thinking" data-es="Visión de sistema completo">Whole-system thinking</h3>
-            <p data-en="Computers, network, display, audio, apps and connected devices often affect each other. We troubleshoot the complete setup." data-es="Computadoras, red, pantalla, audio, apps y dispositivos conectados se afectan entre sí. Revisamos el sistema completo.">Computers, network, display, audio, apps and connected devices often affect each other. We troubleshoot the complete setup.</p>
+            <p data-en="Computers, networks, TVs, audio and apps often affect each other. We look at the complete setup." data-es="Computadoras, redes, TVs, audio y apps muchas veces se afectan entre sí. Revisamos el sistema completo.">Computers, networks, TVs, audio and apps often affect each other. We look at the complete setup.</p>
+          </article>
+
+          <article>
+            <span class="experience-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <h3 data-en="Respect for your privacy" data-es="Respeto por tu privacidad">Respect for your privacy</h3>
+            <p data-en="You stay informed and in control while accounts, settings and personal devices are being worked on." data-es="Te mantenemos informado y en control mientras trabajamos con cuentas, configuración y dispositivos personales.">You stay informed and in control while accounts, settings and personal devices are being worked on.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="process-section">
-      <div class="container">
-        <div class="section-heading compact">
-          <div>
-            <span class="kicker kicker-light" data-en="HOW IT WORKS" data-es="CÓMO FUNCIONA">HOW IT WORKS</span>
-            <h2 data-en="From “it doesn't work” to handled." data-es="De “no funciona” a problema resuelto.">From “it doesn't work” to handled.</h2>
-          </div>
-        </div>
+    <section class="section about-section" id="about">
+      <div class="container about-layout">
+        <div class="about-panel">
+          <span class="section-kicker" data-en="ABOUT TECHEASE" data-es="ACERCA DE TECHEASE">ABOUT TECHEASE</span>
+          <h2 data-en="Technology made simple, personal and practical." data-es="Tecnología simple, personal y práctica.">Technology made simple, personal and practical.</h2>
 
-        <div class="process-grid">
-          <div class="process-step">
-            <span>1</span>
-            <h3 data-en="Describe the problem" data-es="Describe el problema">Describe the problem</h3>
-            <p data-en="Call, text or use the form. Plain language is fine." data-es="Llama, manda texto o usa el formulario. Puedes explicarlo con palabras simples.">Call, text or use the form. Plain language is fine.</p>
-          </div>
-          <div class="process-step">
-            <span>2</span>
-            <h3 data-en="Choose on-site or remote" data-es="Elige a domicilio o remoto">Choose on-site or remote</h3>
-            <p data-en="We'll recommend the fastest practical path." data-es="Recomendaremos la opción más rápida y práctica.">We'll recommend the fastest practical path.</p>
-          </div>
-          <div class="process-step">
-            <span>3</span>
-            <h3 data-en="Diagnose & solve" data-es="Diagnóstico y solución">Diagnose & solve</h3>
-            <p data-en="We trace the cause, fix what we can and explain the result." data-es="Buscamos la causa, resolvemos lo posible y explicamos el resultado.">We trace the cause, fix what we can and explain the result.</p>
-          </div>
-          <div class="process-step">
-            <span>4</span>
-            <h3 data-en="Leave it simpler" data-es="Lo dejamos más simple">Leave it simpler</h3>
-            <p data-en="The goal is a setup you can actually use after we leave." data-es="La meta es dejar un sistema que puedas usar con confianza.">The goal is a setup you can actually use after we leave.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section areas-section" id="areas">
-      <div class="container areas-layout">
-        <div>
-          <span class="kicker" data-en="LOS ANGELES, CALIFORNIA" data-es="LOS ÁNGELES, CALIFORNIA">LOS ANGELES, CALIFORNIA</span>
-          <h2 data-en="Mobile support across Los Angeles, California." data-es="Soporte móvil en Los Ángeles, California.">Mobile support across Los Angeles, California.</h2>
-          <p data-en="On-site availability depends on distance, traffic, job scope and schedule. Remote support is available beyond the local service area." data-es="La disponibilidad a domicilio depende de la distancia, tráfico, tipo de trabajo y horario. El soporte remoto está disponible fuera del área local.">
-            On-site availability depends on distance, traffic, job scope and schedule. Remote support is available beyond the local service area.
+          <p data-en="TechEase was founded in 2015 with a simple idea: people shouldn't need to become technology experts just to get their devices and systems working properly." data-es="TechEase fue fundada en 2015 con una idea sencilla: las personas no deberían tener que convertirse en expertos en tecnología para que sus dispositivos y sistemas funcionen correctamente.">
+            TechEase was founded in 2015 with a simple idea: people shouldn't need to become technology experts just to get their devices and systems working properly.
           </p>
-        </div>
 
-        <div class="area-chips">
-          <span>Los Angeles</span>
-          <span>West Hollywood</span>
-          <span>Hollywood</span>
-          <span>DTLA</span>
-          <span>Culver City</span>
-          <span>Santa Monica</span>
-          <span>Beverly Hills</span>
-          <span>Glendale</span>
-          <span>Burbank</span>
-          <span>Pasadena</span>
-          <span>San Fernando Valley</span>
-          <span data-en="Nearby communities" data-es="Comunidades cercanas">Nearby communities</span>
-        </div>
-      </div>
-    </section>
+          <p data-en="Today, TechEase provides mobile and remote support for individuals, households and small businesses, with an emphasis on patient service, practical problem-solving and support in both English and Spanish." data-es="Hoy, TechEase ofrece soporte móvil y remoto para personas, hogares y pequeñas empresas, con énfasis en servicio paciente, soluciones prácticas y atención en inglés y español.">
+            Today, TechEase provides mobile and remote support for individuals, households and small businesses, with an emphasis on patient service, practical problem-solving and support in both English and Spanish.
+          </p>
 
-    <section class="story-section section">
-      <div class="container story-layout">
-        <div class="story-card">
-          <div class="story-year">2015</div>
-          <div>
-            <span class="kicker" data-en="THE TECHEASE STORY" data-es="LA HISTORIA DE TECHEASE">THE TECHEASE STORY</span>
-            <h2 data-en="Technology made simple — now in Los Angeles, California." data-es="Tecnología hecha simple — ahora en Los Ángeles, California.">Technology made simple — now in Los Angeles, California.</h2>
-            <p data-en="TechEase began in Denver with a straightforward mission: make technology easier for people who just want it to work. The service later expanded to St. Louis and is now bringing that mobile, bilingual approach to Los Angeles, California." data-es="TechEase comenzó en Denver con una misión sencilla: hacer que la tecnología sea más fácil para quienes solo quieren que funcione. El servicio después se expandió a St. Louis y ahora trae ese enfoque móvil y bilingüe a Los Ángeles, California.">
-              TechEase began in Denver with a straightforward mission: make technology easier for people who just want it to work. The service later expanded to St. Louis and is now bringing that mobile, bilingual approach to Los Angeles, California.
-            </p>
+          <div class="about-facts">
+            <div>
+              <strong>2015</strong>
+              <span data-en="Founded" data-es="Fundada">Founded</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span data-en="Languages" data-es="Idiomas">Languages</span>
+            </div>
+            <div>
+              <strong data-en="On-site" data-es="A domicilio">On-site</strong>
+              <span data-en="Mobile support" data-es="Soporte móvil">Mobile support</span>
+            </div>
           </div>
         </div>
 
-        <blockquote>
-          <i class="fa-solid fa-quote-left"></i>
+        <blockquote class="testimonial-card">
+          <span class="quote-mark"><i class="fa-solid fa-quote-left"></i></span>
           <p data-en="Victor helped my mother set up her phone and explained everything — so patient and kind. She's now confidently video calling her grandchildren!" data-es="Victor ayudó a mi madre a configurar su teléfono y explicó todo con mucha paciencia y amabilidad. ¡Ahora hace videollamadas con confianza a sus nietos!">
             Victor helped my mother set up her phone and explained everything — so patient and kind. She's now confidently video calling her grandchildren!
           </p>
-          <footer>M. Henderson</footer>
+          <footer>
+            <strong>M. Henderson</strong>
+            <span data-en="Client testimonial" data-es="Testimonio de cliente">Client testimonial</span>
+          </footer>
         </blockquote>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div class="container contact-layout">
-        <div class="contact-copy">
-          <span class="kicker kicker-light" data-en="GET TECH HELP" data-es="OBTÉN AYUDA TÉCNICA">GET TECH HELP</span>
-          <h2 data-en="Tell us what's going wrong." data-es="Cuéntanos qué está fallando.">Tell us what's going wrong.</h2>
-          <p data-en="You don't need to know the technical name for the problem. Describe what you're seeing, what you want connected, or what needs to work better." data-es="No necesitas saber el nombre técnico del problema. Describe lo que ves, qué quieres conectar o qué necesita funcionar mejor.">
-            You don't need to know the technical name for the problem. Describe what you're seeing, what you want connected, or what needs to work better.
-          </p>
-
-          <div class="contact-methods">
-            <a href="tel:+17192532733">
-              <i class="fa-solid fa-phone"></i>
-              <div><small data-en="CALL" data-es="LLAMAR">CALL</small><strong>(719) 253-2733</strong></div>
-            </a>
-            <a href="sms:+17192532733">
-              <i class="fa-solid fa-message"></i>
-              <div><small data-en="TEXT" data-es="TEXTO">TEXT</small><strong>(719) 253-2733</strong></div>
-            </a>
-            <a href="mailto:gettechease@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
-              <div><small data-en="EMAIL" data-es="CORREO">EMAIL</small><strong>gettechease@gmail.com</strong></div>
-            </a>
-          </div>
-
-          <p class="availability-note">
-            <i class="fa-solid fa-circle-info"></i>
-            <span data-en="Same-day and after-hours requests may be available depending on location and schedule." data-es="Las solicitudes para el mismo día y fuera de horario pueden estar disponibles según ubicación y agenda.">Same-day and after-hours requests may be available depending on location and schedule.</span>
+    <section class="location-section">
+      <div class="container location-card">
+        <div class="location-copy">
+          <span class="section-kicker" data-en="SERVICE AREA" data-es="ÁREA DE SERVICIO">SERVICE AREA</span>
+          <h2>Los Angeles, CA</h2>
+          <p data-en="Mobile support is available throughout the Los Angeles area based on distance, traffic, project scope and scheduling. Remote support is available beyond the local service area." data-es="El soporte móvil está disponible en el área de Los Angeles según distancia, tráfico, tipo de proyecto y disponibilidad. El soporte remoto está disponible fuera del área local.">
+            Mobile support is available throughout the Los Angeles area based on distance, traffic, project scope and scheduling. Remote support is available beyond the local service area.
           </p>
         </div>
+        <div class="location-orb" aria-hidden="true">
+          <div class="map-pin"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="orbit-ring ring-three"></div>
+        </div>
+      </div>
+    </section>
 
-        <div class="contact-form-card">
+    <section class="contact-section section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <span class="section-kicker" data-en="CONTACT" data-es="CONTACTO">CONTACT</span>
+          <h2 data-en="Tell us what you need help with." data-es="Cuéntanos con qué necesitas ayuda.">Tell us what you need help with.</h2>
+          <p data-en="You don't need to know the technical name for the problem. Tell us what isn't working, what you want connected, or what you want your setup to do." data-es="No necesitas saber el nombre técnico del problema. Cuéntanos qué no funciona, qué quieres conectar o qué quieres que haga tu sistema.">
+            You don't need to know the technical name for the problem. Tell us what isn't working, what you want connected, or what you want your setup to do.
+          </p>
+
+          <div class="contact-links">
+            <a href="tel:+17192532733">
+              <span class="contact-link-icon"><i class="fa-solid fa-phone"></i></span>
+              <span>
+                <small data-en="Phone" data-es="Teléfono">Phone</small>
+                <strong>(719) 253-2733</strong>
+              </span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="sms:+17192532733">
+              <span class="contact-link-icon"><i class="fa-regular fa-message"></i></span>
+              <span>
+                <small data-en="Text" data-es="Texto">Text</small>
+                <strong data-en="Send a message" data-es="Enviar mensaje">Send a message</strong>
+              </span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="mailto:gettechease@gmail.com">
+              <span class="contact-link-icon"><i class="fa-regular fa-envelope"></i></span>
+              <span>
+                <small data-en="Email" data-es="Correo">Email</small>
+                <strong>gettechease@gmail.com</strong>
+              </span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <div class="contact-location">
+              <span class="contact-link-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>
+                <small data-en="Service Area" data-es="Área de Servicio">Service Area</small>
+                <strong>Los Angeles, CA</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-shell">
+          <div class="form-header">
+            <div>
+              <span class="form-status"><span class="status-dot"></span><span data-en="Service requests open" data-es="Solicitudes disponibles">Service requests open</span></span>
+              <h3 data-en="Request a consultation" data-es="Solicita una consulta">Request a consultation</h3>
+            </div>
+            <span class="form-icon"><i class="fa-solid fa-sparkles"></i></span>
+          </div>
+
           <form action="https://formsubmit.co/gettechease@gmail.com" method="POST" id="contactForm">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New TechEase Los Angeles Service Request">
+            <input type="hidden" name="_subject" value="New TechEase Service Request - Los Angeles, CA">
             <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
 
-            <div class="form-row">
-              <div class="form-group">
+            <div class="field-row">
+              <div class="field">
                 <label for="name" data-en="Name" data-es="Nombre">Name</label>
-                <input id="name" name="name" type="text" required autocomplete="name">
+                <input type="text" id="name" name="name" required autocomplete="name">
               </div>
-              <div class="form-group">
+              <div class="field">
                 <label for="phone" data-en="Phone" data-es="Teléfono">Phone</label>
-                <input id="phone" name="phone" type="tel" required autocomplete="tel">
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="field">
               <label for="email" data-en="Email" data-es="Correo">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email">
+              <input type="email" id="email" name="email" autocomplete="email">
             </div>
 
-            <div class="form-group">
+            <div class="field">
               <label for="service" data-en="What do you need help with?" data-es="¿Con qué necesitas ayuda?">What do you need help with?</label>
               <select id="service" name="service" required>
                 <option value="" data-en="Choose a service" data-es="Elige un servicio">Choose a service</option>
-                <option value="computer-device" data-en="Computer / Device Support" data-es="Computadora / Dispositivo">Computer / Device Support</option>
-                <option value="audio-video" data-en="Audio / Video / TV / Home Theater" data-es="Audio / Video / TV / Cine en Casa">Audio / Video / TV / Home Theater</option>
-                <option value="wifi-network" data-en="Wi-Fi / Network" data-es="Wi-Fi / Red">Wi-Fi / Network</option>
-                <option value="business-it" data-en="Business / Office IT" data-es="IT para Empresa / Oficina">Business / Office IT</option>
+                <option value="computer" data-en="Computer / Device Support" data-es="Computadora / Dispositivo">Computer / Device Support</option>
+                <option value="av" data-en="Audio / Video / TV" data-es="Audio / Video / TV">Audio / Video / TV</option>
+                <option value="network" data-en="Wi-Fi / Networking" data-es="Wi-Fi / Redes">Wi-Fi / Networking</option>
+                <option value="business" data-en="Business Technology" data-es="Tecnología Empresarial">Business Technology</option>
                 <option value="smart-home" data-en="Smart Home / Streaming" data-es="Casa Inteligente / Streaming">Smart Home / Streaming</option>
                 <option value="remote" data-en="Remote Support" data-es="Soporte Remoto">Remote Support</option>
-                <option value="other" data-en="Something Else" data-es="Otro Problema">Something Else</option>
+                <option value="other" data-en="Something Else" data-es="Otro">Something Else</option>
               </select>
             </div>
 
-            <div class="form-group">
+            <div class="field">
               <label for="location" data-en="City / Neighborhood" data-es="Ciudad / Zona">City / Neighborhood</label>
-              <input id="location" name="location" type="text" placeholder="e.g. West Hollywood" data-placeholder-en="e.g. West Hollywood" data-placeholder-es="ej. West Hollywood">
+              <input type="text" id="location" name="location" placeholder="e.g. Hollywood" data-placeholder-en="e.g. Hollywood" data-placeholder-es="ej. Hollywood">
             </div>
 
-            <div class="form-group">
+            <div class="field">
               <label for="message" data-en="Describe the issue or project" data-es="Describe el problema o proyecto">Describe the issue or project</label>
               <textarea id="message" name="message" rows="6" required placeholder="What is happening? What devices are involved?" data-placeholder-en="What is happening? What devices are involved?" data-placeholder-es="¿Qué está pasando? ¿Qué dispositivos están involucrados?"></textarea>
             </div>
 
-            <button class="btn btn-primary form-submit" type="submit">
-              <i class="fa-solid fa-paper-plane"></i>
+            <button class="submit-button" type="submit">
               <span data-en="Send Service Request" data-es="Enviar Solicitud">Send Service Request</span>
+              <span class="submit-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
             </button>
-
-            <p class="form-note" data-en="By submitting, you are asking TechEase to contact you about this service request." data-es="Al enviar, solicitas que TechEase te contacte sobre esta solicitud de servicio.">
-              By submitting, you are asking TechEase to contact you about this service request.
-            </p>
           </form>
         </div>
       </div>
@@ -550,27 +617,30 @@
 
     <section class="faq-section section">
       <div class="container faq-layout">
-        <div>
-          <span class="kicker" data-en="FAQ" data-es="PREGUNTAS">FAQ</span>
-          <h2 data-en="Before you book." data-es="Antes de reservar.">Before you book.</h2>
+        <div class="faq-heading">
+          <span class="section-kicker" data-en="QUESTIONS" data-es="PREGUNTAS">QUESTIONS</span>
+          <h2 data-en="A few things to know." data-es="Algunas cosas que debes saber.">A few things to know.</h2>
         </div>
 
         <div class="faq-list">
           <details>
             <summary data-en="Do you work with both homes and businesses?" data-es="¿Trabajan con hogares y empresas?">Do you work with both homes and businesses?</summary>
-            <p data-en="Yes. TechEase supports individuals, home offices, small businesses and other local organizations with everyday technology, networking and audio/video needs." data-es="Sí. TechEase ayuda a personas, oficinas en casa, pequeñas empresas y otras organizaciones locales con tecnología diaria, redes y audio/video.">Yes. TechEase supports individuals, home offices, small businesses and other local organizations with everyday technology, networking and audio/video needs.</p>
+            <p data-en="Yes. TechEase supports individuals, households, home offices and small businesses with everyday technology, networking and audio/video needs." data-es="Sí. TechEase ayuda a personas, hogares, oficinas en casa y pequeñas empresas con tecnología diaria, redes y audio/video.">Yes. TechEase supports individuals, households, home offices and small businesses with everyday technology, networking and audio/video needs.</p>
           </details>
+
           <details>
             <summary data-en="Can you help if I don't know what the problem is?" data-es="¿Pueden ayudar si no sé cuál es el problema?">Can you help if I don't know what the problem is?</summary>
-            <p data-en="Absolutely. Describe the symptom — no sound, slow computer, weak Wi-Fi, blank screen, app errors — and TechEase can start with diagnosis." data-es="Claro. Describe el síntoma — sin sonido, computadora lenta, Wi-Fi débil, pantalla en negro, errores de apps — y TechEase puede comenzar con diagnóstico.">Absolutely. Describe the symptom — no sound, slow computer, weak Wi-Fi, blank screen, app errors — and TechEase can start with diagnosis.</p>
+            <p data-en="Yes. Describe the symptom — slow computer, weak Wi-Fi, no sound, blank screen, app errors or devices that won't connect — and we can begin with diagnosis." data-es="Sí. Describe el síntoma — computadora lenta, Wi-Fi débil, sin sonido, pantalla en negro, errores de apps o dispositivos que no se conectan — y podemos comenzar con diagnóstico.">Yes. Describe the symptom — slow computer, weak Wi-Fi, no sound, blank screen, app errors or devices that won't connect — and we can begin with diagnosis.</p>
           </details>
+
           <details>
             <summary data-en="Do you offer remote support?" data-es="¿Ofrecen soporte remoto?">Do you offer remote support?</summary>
-            <p data-en="Yes, for issues that can be safely handled without physical access to the equipment. Hardware installation and hands-on troubleshooting require an on-site visit." data-es="Sí, para problemas que pueden resolverse de forma segura sin acceso físico al equipo. La instalación de hardware y el diagnóstico físico requieren visita a domicilio.">Yes, for issues that can be safely handled without physical access to the equipment. Hardware installation and hands-on troubleshooting require an on-site visit.</p>
+            <p data-en="Yes, when the issue can be safely handled without physical access to the equipment. Hardware installation and hands-on troubleshooting require an on-site visit." data-es="Sí, cuando el problema puede resolverse de forma segura sin acceso físico al equipo. La instalación de hardware y el diagnóstico físico requieren una visita.">Yes, when the issue can be safely handled without physical access to the equipment. Hardware installation and hands-on troubleshooting require an on-site visit.</p>
           </details>
+
           <details>
-            <summary data-en="Do you speak Spanish?" data-es="¿Hablan español?">Do you speak Spanish?</summary>
-            <p data-en="Yes. Service is available in English and Spanish." data-es="Sí. El servicio está disponible en inglés y español.">Yes. Service is available in English and Spanish.</p>
+            <summary data-en="Is support available in Spanish?" data-es="¿El soporte está disponible en español?">Is support available in Spanish?</summary>
+            <p data-en="Yes. TechEase provides support in both English and Spanish." data-es="Sí. TechEase ofrece soporte en inglés y español.">Yes. TechEase provides support in both English and Spanish.</p>
           </details>
         </div>
       </div>
@@ -578,121 +648,128 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="#home">
-          <span class="brand-mark" aria-hidden="true"><span class="brand-core"></span></span>
-          <span class="brand-copy"><strong>TechEase</strong><small>Los Angeles, California</small></span>
+    <div class="container footer-main">
+      <div class="footer-brand-block">
+        <a class="brand" href="#home">
+          <span class="brand-icon" aria-hidden="true"><span class="brand-glyph"></span></span>
+          <span class="brand-text">
+            <strong>TechEase</strong>
+            <small data-en="Technology Made Simple" data-es="Tecnología Hecha Simple">Technology Made Simple</small>
+          </span>
         </a>
-        <p data-en="Mobile technology support for people and businesses across Los Angeles, California." data-es="Soporte tecnológico móvil para personas y empresas en Los Ángeles, California.">Mobile technology support for people and businesses across Los Angeles, California.</p>
+        <p data-en="Professional mobile and remote technology support for homes and small businesses." data-es="Soporte tecnológico profesional, móvil y remoto para hogares y pequeñas empresas.">
+          Professional mobile and remote technology support for homes and small businesses.
+        </p>
       </div>
 
-      <div>
+      <div class="footer-column">
         <h3 data-en="Services" data-es="Servicios">Services</h3>
         <a href="#services" data-en="Computer Support" data-es="Soporte de Computadoras">Computer Support</a>
-        <a href="#av">Audio / Video</a>
+        <a href="#av" data-en="Audio & Video" data-es="Audio y Video">Audio & Video</a>
         <a href="#services" data-en="Wi-Fi & Networking" data-es="Wi-Fi y Redes">Wi-Fi & Networking</a>
-        <a href="#business" data-en="Business IT" data-es="IT para Empresas">Business IT</a>
+        <a href="#business" data-en="Business Technology" data-es="Tecnología Empresarial">Business Technology</a>
       </div>
 
-      <div>
+      <div class="footer-column">
         <h3 data-en="Contact" data-es="Contacto">Contact</h3>
         <a href="tel:+17192532733">(719) 253-2733</a>
         <a href="mailto:gettechease@gmail.com">gettechease@gmail.com</a>
-        <span>Los Angeles, California, CA</span>
+        <span>Los Angeles, CA</span>
       </div>
 
-      <div>
+      <div class="footer-column">
         <h3 data-en="Language" data-es="Idioma">Language</h3>
-        <button class="footer-lang" id="footerLanguageToggle" type="button">
+        <button class="footer-language" id="footerLanguageToggle" type="button">
           <i class="fa-solid fa-globe"></i>
-          <span data-en="Ver sitio en Español" data-es="View site in English">Ver sitio en Español</span>
+          <span data-en="Español" data-es="English">Español</span>
         </button>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <span>&copy; <span id="year"></span> TechEase. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></span>
-      <span data-en="Technology made simple." data-es="Tecnología hecha simple.">Technology made simple.</span>
+      <span data-en="Technology Made Simple." data-es="Tecnología Hecha Simple.">Technology Made Simple.</span>
     </div>
   </footer>
 
-  <div class="mobile-contact-bar" aria-label="Quick contact">
-    <a href="tel:+17192532733"><i class="fa-solid fa-phone"></i><span data-en="Call" data-es="Llamar">Call</span></a>
-    <a href="sms:+17192532733"><i class="fa-solid fa-message"></i><span data-en="Text" data-es="Texto">Text</span></a>
-    <a href="#contact"><i class="fa-solid fa-calendar-check"></i><span data-en="Book" data-es="Reservar">Book</span></a>
+  <div class="mobile-dock" aria-label="Quick actions">
+    <a href="tel:+17192532733">
+      <i class="fa-solid fa-phone"></i>
+      <span data-en="Call" data-es="Llamar">Call</span>
+    </a>
+    <a href="sms:+17192532733">
+      <i class="fa-regular fa-message"></i>
+      <span data-en="Text" data-es="Texto">Text</span>
+    </a>
+    <a class="dock-primary" href="#contact">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span data-en="Request" data-es="Solicitar">Request</span>
+    </a>
   </div>
 
   <script>
-(() => {
-  const body = document.body;
-  const languageToggle = document.getElementById("languageToggle");
-  const footerLanguageToggle = document.getElementById("footerLanguageToggle");
-  const languageLabel = document.getElementById("languageLabel");
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileNav = document.getElementById("mobileNav");
-  const year = document.getElementById("year");
-  const contactForm = document.getElementById("contactForm");
+    (() => {
+      const body = document.body;
+      const languageToggle = document.getElementById('languageToggle');
+      const footerLanguageToggle = document.getElementById('footerLanguageToggle');
+      const languageLabel = document.getElementById('languageLabel');
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const year = document.getElementById('year');
 
-  const getLang = () => localStorage.getItem("techease-lang") || "en";
+      let language = localStorage.getItem('techease-language') || 'en';
 
-  function applyLanguage(lang) {
-    const spanish = lang === "es";
-    document.documentElement.lang = spanish ? "es" : "en";
-    body.dataset.lang = lang;
+      function applyLanguage(lang) {
+        language = lang;
+        document.documentElement.lang = lang;
+        localStorage.setItem('techease-language', lang);
 
-    document.querySelectorAll("[data-en][data-es]").forEach((el) => {
-      const value = spanish ? el.dataset.es : el.dataset.en;
-      if (typeof value === "string") el.textContent = value;
-    });
+        document.querySelectorAll('[data-en][data-es]').forEach((element) => {
+          element.textContent = lang === 'es' ? element.dataset.es : element.dataset.en;
+        });
 
-    document.querySelectorAll("[data-placeholder-en][data-placeholder-es]").forEach((el) => {
-      el.placeholder = spanish ? el.dataset.placeholderEs : el.dataset.placeholderEn;
-    });
+        document.querySelectorAll('[data-placeholder-en][data-placeholder-es]').forEach((element) => {
+          element.placeholder = lang === 'es'
+            ? element.dataset.placeholderEs
+            : element.dataset.placeholderEn;
+        });
 
-    if (languageLabel) languageLabel.textContent = spanish ? "English" : "Español";
-    localStorage.setItem("techease-lang", lang);
-  }
+        if (languageLabel) {
+          languageLabel.textContent = lang === 'es' ? 'English' : 'Español';
+        }
+      }
 
-  function toggleLanguage() {
-    applyLanguage(getLang() === "es" ? "en" : "es");
-  }
+      function toggleLanguage() {
+        applyLanguage(language === 'en' ? 'es' : 'en');
+      }
 
-  languageToggle?.addEventListener("click", toggleLanguage);
-  footerLanguageToggle?.addEventListener("click", toggleLanguage);
+      languageToggle?.addEventListener('click', toggleLanguage);
+      footerLanguageToggle?.addEventListener('click', toggleLanguage);
 
-  function closeMenu() {
-    mobileNav?.classList.remove("open");
-    body.classList.remove("menu-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
-  }
+      function closeMenu() {
+        mobileMenu?.classList.remove('open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+        body.classList.remove('menu-open');
+      }
 
-  menuToggle?.addEventListener("click", () => {
-    const willOpen = !mobileNav?.classList.contains("open");
-    mobileNav?.classList.toggle("open", willOpen);
-    body.classList.toggle("menu-open", willOpen);
-    menuToggle.setAttribute("aria-expanded", String(willOpen));
-  });
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = mobileMenu?.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+        body.classList.toggle('menu-open', Boolean(isOpen));
+      });
 
-  mobileNav?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMenu();
-  });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
 
-  if (year) year.textContent = new Date().getFullYear();
+      if (year) year.textContent = new Date().getFullYear();
 
-  contactForm?.addEventListener("submit", () => {
-    const button = contactForm.querySelector('button[type="submit"]');
-    if (!button) return;
-    button.style.opacity = ".75";
-    button.style.pointerEvents = "none";
-  });
-
-  applyLanguage(getLang());
-})();
-</script>
+      applyLanguage(language);
+    })();
+  </script>
 </body>
 </html>
