@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>TechEase | Mobile Tech Support in Los Angeles, CA</title>
   <meta name="description" content="TechEase provides professional mobile tech support for homes and businesses in Los Angeles, CA. Computer help, Wi-Fi, audio/video, smart home, business technology and remote support in English and Spanish.">
-  <meta name="theme-color" content="#f5f5f7">
+  <meta name="theme-color" content="#f5f5f7" id="themeColorMeta">
 
   <meta property="og:title" content="TechEase | Technology Made Simple">
   <meta property="og:description" content="Professional mobile tech support for homes and businesses in Los Angeles, CA.">
@@ -71,6 +71,10 @@
         <button class="glass-control language-toggle" id="languageToggle" type="button" aria-label="Switch language">
           <i class="fa-solid fa-globe"></i>
           <span id="languageLabel">Español</span>
+        </button>
+        <button class="glass-control theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+          <i class="fa-solid fa-sun" id="themeToggleIcon"></i>
+          <span id="themeToggleLabel">Light Mode</span>
         </button>
         <a class="glass-control header-call" href="tel:+17192532733">
           <i class="fa-solid fa-phone"></i>
@@ -358,7 +362,7 @@
             </div>
           </article>
 
-          <article class="bento-card bento-wide" id="business">
+          <article class="bento-card bento-wide business-showcase" id="business">
             <div class="business-card-copy">
               <div class="card-topline">
                 <span class="service-symbol symbol-orange"><i class="fa-solid fa-building"></i></span>
@@ -371,11 +375,34 @@
                 </p>
               </div>
             </div>
-            <div class="business-mini-grid">
-              <div><i class="fa-solid fa-desktop"></i><span data-en="Workstations" data-es="Equipos">Workstations</span></div>
-              <div><i class="fa-solid fa-print"></i><span data-en="Printers" data-es="Impresoras">Printers</span></div>
-              <div><i class="fa-solid fa-video"></i><span data-en="Meeting Rooms" data-es="Salas de Reunión">Meeting Rooms</span></div>
-              <div><i class="fa-solid fa-network-wired"></i><span data-en="Office Network" data-es="Red de Oficina">Office Network</span></div>
+            <div class="business-visual" aria-hidden="true">
+              <div class="business-monitor">
+                <div class="business-screen">
+                  <div class="business-ui-tiles">
+                    <span></span><span></span>
+                  </div>
+                  <div class="business-ui-line"></div>
+                  <div class="business-ui-line short"></div>
+                  <div class="business-ui-line tiny"></div>
+                </div>
+                <div class="business-monitor-stand"></div>
+                <div class="business-monitor-base"></div>
+              </div>
+
+              <div class="business-printer">
+                <div class="business-printer-paper"></div>
+                <div class="business-printer-tray"></div>
+              </div>
+
+              <div class="business-meeting-panel">
+                <div class="business-meeting-cam"></div>
+                <div class="business-meeting-line"></div>
+                <div class="business-meeting-line short"></div>
+              </div>
+
+              <div class="business-network-hub">
+                <div class="business-network-lights"><span></span><span></span><span></span><span></span></div>
+              </div>
             </div>
           </article>
 
@@ -754,6 +781,10 @@
           <i class="fa-solid fa-globe"></i>
           <span data-en="Español" data-es="English">Español</span>
         </button>
+        <button class="footer-theme" id="footerThemeToggle" type="button" aria-pressed="false">
+          <i class="fa-solid fa-sun" id="footerThemeIcon"></i>
+          <span id="footerThemeLabel">Light Mode</span>
+        </button>
       </div>
     </div>
 
@@ -780,15 +811,64 @@
 
   <script>
     (() => {
+      const rootEl = document.documentElement;
       const body = document.body;
       const languageToggle = document.getElementById('languageToggle');
       const footerLanguageToggle = document.getElementById('footerLanguageToggle');
       const languageLabel = document.getElementById('languageLabel');
+
+      const themeToggle = document.getElementById('themeToggle');
+      const footerThemeToggle = document.getElementById('footerThemeToggle');
+      const themeToggleLabel = document.getElementById('themeToggleLabel');
+      const footerThemeLabel = document.getElementById('footerThemeLabel');
+      const themeToggleIcon = document.getElementById('themeToggleIcon');
+      const footerThemeIcon = document.getElementById('footerThemeIcon');
+      const themeColorMeta = document.getElementById('themeColorMeta');
+
       const menuToggle = document.getElementById('menuToggle');
       const mobileMenu = document.getElementById('mobileMenu');
       const year = document.getElementById('year');
 
       let language = localStorage.getItem('techease-language') || 'en';
+      let theme = localStorage.getItem('techease-theme')
+        || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+      function updateThemeControls() {
+        const isDark = theme === 'dark';
+        const themeLabelText = language === 'es'
+          ? (isDark ? 'Modo Oscuro' : 'Modo Claro')
+          : (isDark ? 'Dark Mode' : 'Light Mode');
+        const themeIconClass = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        const themeColor = isDark ? '#0b0c10' : '#f5f5f7';
+
+        [themeToggleLabel, footerThemeLabel].forEach((el) => {
+          if (el) el.textContent = themeLabelText;
+        });
+
+        [themeToggleIcon, footerThemeIcon].forEach((el) => {
+          if (el) el.className = themeIconClass;
+        });
+
+        [themeToggle, footerThemeToggle].forEach((el) => {
+          if (el) {
+            el.setAttribute('aria-pressed', String(isDark));
+            el.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+          }
+        });
+
+        if (themeColorMeta) themeColorMeta.setAttribute('content', themeColor);
+      }
+
+      function applyTheme(nextTheme) {
+        theme = nextTheme;
+        rootEl.dataset.theme = nextTheme;
+        localStorage.setItem('techease-theme', nextTheme);
+        updateThemeControls();
+      }
+
+      function toggleTheme() {
+        applyTheme(theme === 'dark' ? 'light' : 'dark');
+      }
 
       function applyLanguage(lang) {
         language = lang;
@@ -808,6 +888,8 @@
         if (languageLabel) {
           languageLabel.textContent = lang === 'es' ? 'English' : 'Español';
         }
+
+        updateThemeControls();
       }
 
       function toggleLanguage() {
@@ -816,6 +898,8 @@
 
       languageToggle?.addEventListener('click', toggleLanguage);
       footerLanguageToggle?.addEventListener('click', toggleLanguage);
+      themeToggle?.addEventListener('click', toggleTheme);
+      footerThemeToggle?.addEventListener('click', toggleTheme);
 
       function closeMenu() {
         mobileMenu?.classList.remove('open');
@@ -839,6 +923,7 @@
 
       if (year) year.textContent = new Date().getFullYear();
 
+      applyTheme(theme);
       applyLanguage(language);
     })();
   </script>
