@@ -1,63 +1,59 @@
-TechEase — Los Angeles Website Rebuild
+TechEase — Complete Liquid Glass Redesign
 
-This folder is ready to upload to a simple static host such as GitHub Pages.
+This version is a full rebuild.
 
 Files
 
-index.html — page content, SEO metadata, bilingual text, contact form and local-business structured data
+index.html
 
-style.css — responsive visual design
+style.css
 
-script.js — English/Spanish toggle, mobile navigation and small UI behavior
+All JavaScript remains embedded inside index.html; there is no script.js.
 
-Before publishing
+Location treatment
 
-Confirm the phone number and email address everywhere in index.html.
+The site uses Los Angeles, CA only where location adds useful context:
 
-Consider getting a Los Angeles local phone number (213 / 310 / 323 / 424 / 818) and forwarding it to your existing phone.
+SEO title and meta description
 
-FormSubmit may require a one-time activation/verification for gettechease@gmail.com. Test the form after publishing.
+hero service description
 
-Add your real project photos later: TV/audio setups, clean desktop work, Wi-Fi/network setups, conference-room work and before/after cable organization.
+structured business data
 
-Connect the site to your Google Business Profile and use the exact same business name, phone number and service-area wording.
+service-area section
 
-Add separate service pages over time for local SEO, e.g.:
+contact section
 
-/computer-repair-los-angeles.html
+footer contact information
 
-/audio-video-support-los-angeles.html
+The location is intentionally not attached to the TechEase logo, brand name, navigation, or decorative labels.
 
-/wifi-support-los-angeles.html
+Design direction
 
-/small-business-it-los-angeles.html
+The design is inspired by modern iOS/macOS Liquid Glass principles:
 
-Do not advertise contractor licensing, insurance, certifications, client counts, satisfaction percentages or warranties unless you can substantiate them.
+calm white and soft-gray content layers
 
-California regulates some construction / low-voltage installation work. Confirm licensing requirements before advertising or accepting work that involves permanent low-voltage systems, in-wall wiring or permit-required construction.
+translucent floating navigation and controls
 
-Positioning used in this redesign
+colorful refracted light fields behind selected interface elements
 
-TechEase = the mobile technology generalist who can handle computers + Wi-Fi + A/V + smart home + small-business technology.
+restrained shadows and rounded geometry
 
-The goal is to differentiate TechEase from:
+clean system typography
 
-computer-repair shops that only work on PCs,
+glass used for interaction/navigation rather than indiscriminately on every card
 
-A/V integrators focused only on large custom projects,
+responsive mobile floating action dock
 
-managed IT providers that only want business contracts.
+Existing details preserved
 
-The site intentionally emphasizes:
+Phone: (719) 253-2733
 
-on-site convenience,
+Email: gettechease@gmail.com
 
-audio/video troubleshooting,
+English / Spanish toggle
 
-bilingual English/Spanish service,
+FormSubmit contact form
 
-home + business support,
-
-whole-system diagnosis,
-
-call/text conversion on mobile.
+Mobile and remote service positioning
